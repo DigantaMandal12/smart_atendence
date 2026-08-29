@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manage Resources | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-resources.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>Teacher Portal</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+            📊 Dashboard
+        </a>
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+            👨‍🎓 Students
+        </a>
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+            📅 Attendance
+        </a>
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+            📚 Syllabus
+        </a>
+
+        <a
+            href="/teacher/resources"
+            class="nav-item active"
+        >
+            📖 Resources
+        </a>
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+            📝 Quiz
+        </a>
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+            👤 Profile
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+            🚪 Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<main class="main-content">
+
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Manage Resources
+            </h1>
+
+        </div>
+
+
+        <a
+            href="/teacher/resources"
+            class="back-btn"
+        >
+            ← Back to Resources
+        </a>
+
+    </header>
+
+
+
+    <!-- RESOURCE FORM -->
+
+    <section class="resource-form-card">
+
+
+        <div class="form-heading">
+
+            <span>
+                RESOURCE MANAGEMENT
+            </span>
+
+            <h2>
+                Add New Resource
+            </h2>
+
+            <p>
+                Share useful learning material with students.
+            </p>
+
+        </div>
+
+
+
+        <form
+            action="/teacher/resources/add"
+            method="POST"
+        >
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label>
+                    Resource Title
+                </label>
+
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="Enter resource title"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    rows="4"
+                    placeholder="Describe this resource..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- ACADEMIC -->
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Semester
+                    </label>
+
+                    <select name="semester">
+
+                        <option>
+                            Semester 1
+                        </option>
+
+                        <option>
+                            Semester 2
+                        </option>
+
+                        <option>
+                            Semester 3
+                        </option>
+
+                        <option selected>
+                            Semester 4
+                        </option>
+
+                        <option>
+                            Semester 5
+                        </option>
+
+                        <option>
+                            Semester 6
+                        </option>
+
+                        <option>
+                            Semester 7
+                        </option>
+
+                        <option>
+                            Semester 8
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <select name="subject">
+
+                        <option>
+                            Data Structures & Algorithms
+                        </option>
+
+                        <option>
+                            Database Management System
+                        </option>
+
+                        <option>
+                            Operating Systems
+                        </option>
+
+                        <option>
+                            Computer Networks
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Unit
+                    </label>
+
+                    <input
+                        type="text"
+                        name="unit"
+                        placeholder="Example: Unit 3"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOURCE TYPE -->
+
+            <div class="form-group">
+
+                <label>
+                    Resource Type
+                </label>
+
+
+                <div class="resource-type-options">
+
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="resourceType"
+                            value="pdf"
+                            checked
+                        >
+
+                        <span>
+                            📄 PDF
+                        </span>
+
+                    </label>
+
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="resourceType"
+                            value="video"
+                        >
+
+                        <span>
+                            ▶️ Video
+                        </span>
+
+                    </label>
+
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="resourceType"
+                            value="link"
+                        >
+
+                        <span>
+                            🔗 Website
+                        </span>
+
+                    </label>
+
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="resourceType"
+                            value="document"
+                        >
+
+                        <span>
+                            📑 Document
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACCESS -->
+
+            <div class="form-group">
+
+                <label>
+                    Access Type
+                </label>
+
+
+                <div class="access-options">
+
+
+                    <label class="access-option">
+
+                        <input
+                            type="radio"
+                            name="accessType"
+                            value="free"
+                            checked
+                            onclick="showPrice(false)"
+                        >
+
+                        <div>
+
+                            <strong>
+                                🆓 Free
+                            </strong>
+
+                            <span>
+                                Students can access this
+                                resource for free.
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="access-option">
+
+                        <input
+                            type="radio"
+                            name="accessType"
+                            value="paid"
+                            onclick="showPrice(true)"
+                        >
+
+                        <div>
+
+                            <strong>
+                                💰 Paid
+                            </strong>
+
+                            <span>
+                                Students need to purchase
+                                this resource.
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div
+                class="form-group"
+                id="priceBox"
+                style="display:none;"
+            >
+
+                <label>
+                    Price (₹)
+                </label>
+
+                <input
+                    type="number"
+                    name="price"
+                    min="0"
+                    placeholder="Enter price"
+                >
+
+            </div>
+
+
+
+            <!-- RESOURCE URL -->
+
+            <div class="form-group">
+
+                <label>
+                    Resource URL
+                </label>
+
+                <input
+                    type="url"
+                    name="resourceUrl"
+                    placeholder="https://example.com/resource"
+                >
+
+                <small>
+                    Use this for YouTube, Google Drive,
+                    websites, etc.
+                </small>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="form-actions">
+
+                <a
+                    href="/teacher/resources"
+                    class="cancel-btn"
+                >
+                    Cancel
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    💾 Publish Resource
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script>
+
+function showPrice(show) {
+
+    const priceBox =
+        document.getElementById("priceBox");
+
+    if (show) {
+
+        priceBox.style.display = "block";
+
+    } else {
+
+        priceBox.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

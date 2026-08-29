@@ -1,0 +1,264 @@
+.profile-container,
+.edit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.profile-header,
+.edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.portal-label {
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profile-header h1,
+.edit-header h1 {
+    margin: 5px 0;
+    font-size: 32px;
+}
+
+.profile-header p,
+.edit-header p {
+    color: #64748b;
+}
+
+
+/* PROFILE HEADER CARD */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: white;
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.profile-main h2 {
+    margin: 0 0 5px;
+}
+
+.profile-main p {
+    color: #64748b;
+}
+
+.employee-badge {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+/* INFORMATION CARDS */
+
+.info-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h2 {
+    margin-bottom: 5px;
+}
+
+.section-description {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.info-item span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+.info-item strong {
+    font-size: 16px;
+}
+
+
+/* BUTTON */
+
+.edit-button,
+.save-button {
+    border: none;
+
+    background: #4f46e5;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.back-button,
+.cancel-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    text-decoration: none;
+}
+
+
+/* EDIT FORM */
+
+.edit-form {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.form-section {
+    margin-bottom: 35px;
+}
+
+.form-section h2 {
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+}
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    border-top: 1px solid #e5e7eb;
+
+    padding-top: 25px;
+}
+
+
+@media (max-width: 700px) {
+
+    .profile-container,
+    .edit-container {
+        padding: 20px;
+    }
+
+    .profile-header,
+    .edit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .info-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

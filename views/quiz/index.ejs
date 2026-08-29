@@ -1,0 +1,901 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Quiz | Smart Academic System</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/quiz.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <h2>SmartEdu</h2>
+
+                <span>
+                    Academic System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a
+                href="/dashboard"
+                class="nav-item"
+            >
+                <span>📊</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="/attendance"
+                class="nav-item"
+            >
+                <span>📅</span>
+                Attendance
+            </a>
+
+
+            <a
+                href="/syllabus"
+                class="nav-item"
+            >
+                <span>📚</span>
+                Syllabus
+            </a>
+
+
+            <a
+                href="/resources"
+                class="nav-item"
+            >
+                <span>📖</span>
+                Resources
+            </a>
+
+
+            <a
+                href="/quiz"
+                class="nav-item active"
+            >
+                <span>📝</span>
+                Quiz
+            </a>
+
+
+            <a
+                href="/profile"
+                class="nav-item"
+            >
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="/logout"
+                class="nav-item logout"
+            >
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <h1>
+                        Quiz & Practice
+                    </h1>
+
+                    <p>
+                        Test your knowledge and improve your skills
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Student
+                        </strong>
+
+                        <small>
+                            Student ID: STU001
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="quiz-hero">
+
+            <div>
+
+                <span class="hero-label">
+                    LEARN • TEST • IMPROVE
+                </span>
+
+
+                <h2>
+                    Challenge yourself
+                    with a quiz.
+                </h2>
+
+
+                <p>
+                    Practice your academic subjects,
+                    DSA skills and aptitude to prepare
+                    for exams and placements.
+                </p>
+
+            </div>
+
+
+            <div class="quiz-hero-icon">
+                🧠
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ TYPES ================= -->
+
+        <section class="quiz-types">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Choose Quiz Type
+                    </h2>
+
+                    <p>
+                        Select a category and start practicing
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quiz-type-grid">
+
+
+                <!-- ================= SUBJECT ================= -->
+
+                <div
+                    class="quiz-type-card subject-card"
+                    data-type="subject"
+                >
+
+                    <div class="quiz-type-icon">
+                        📚
+                    </div>
+
+
+                    <div class="quiz-type-content">
+
+                        <span class="quiz-label">
+                            ACADEMIC
+                        </span>
+
+
+                        <h3>
+                            Subject-wise Quiz
+                        </h3>
+
+
+                        <p>
+                            Test your knowledge from
+                            your semester subjects.
+                        </p>
+
+
+                        <div class="quiz-stats">
+
+                            <span>
+                                📋 10–20 Questions
+                            </span>
+
+                            <span>
+                                ⏱️ 15–30 Minutes
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="start-btn"
+                            data-action="subject"
+                        >
+                            Choose Subject →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= DSA ================= -->
+
+                <div
+                    class="quiz-type-card dsa-card"
+                    data-type="dsa"
+                >
+
+                    <div class="quiz-type-icon">
+                        💻
+                    </div>
+
+
+                    <div class="quiz-type-content">
+
+                        <span class="quiz-label">
+                            CODING
+                        </span>
+
+
+                        <h3>
+                            DSA Quiz
+                        </h3>
+
+
+                        <p>
+                            Practice Data Structures
+                            and Algorithms.
+                        </p>
+
+
+                        <div class="quiz-stats">
+
+                            <span>
+                                📋 10–20 Questions
+                            </span>
+
+                            <span>
+                                ⏱️ 20–40 Minutes
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="start-btn"
+                            data-action="dsa"
+                        >
+                            Start DSA Quiz →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= APTITUDE ================= -->
+
+                <div
+                    class="quiz-type-card aptitude-card"
+                    data-type="aptitude"
+                >
+
+                    <div class="quiz-type-icon">
+                        🧮
+                    </div>
+
+
+                    <div class="quiz-type-content">
+
+                        <span class="quiz-label">
+                            PLACEMENT
+                        </span>
+
+
+                        <h3>
+                            Aptitude Quiz
+                        </h3>
+
+
+                        <p>
+                            Improve quantitative aptitude,
+                            reasoning and verbal skills.
+                        </p>
+
+
+                        <div class="quiz-stats">
+
+                            <span>
+                                📋 10–20 Questions
+                            </span>
+
+                            <span>
+                                ⏱️ 15–30 Minutes
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="start-btn"
+                            data-action="aptitude"
+                        >
+                            Start Aptitude →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUBJECT SELECTION ================= -->
+
+        <section
+            class="subject-selection"
+            id="subjectSelection"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Select Subject
+                    </h2>
+
+                    <p>
+                        Choose a subject for your quiz
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="subject-quiz-grid">
+
+
+                <button
+                    class="subject-quiz-card"
+                    data-subject="Data Structures"
+                >
+
+                    <span>
+                        💻
+                    </span>
+
+                    <strong>
+                        Data Structures
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="subject-quiz-card"
+                    data-subject="Database Management"
+                >
+
+                    <span>
+                        🗄️
+                    </span>
+
+                    <strong>
+                        Database Management
+                    </strong>
+
+                    <small>
+                        20 Questions
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="subject-quiz-card"
+                    data-subject="Web Development"
+                >
+
+                    <span>
+                        🌐
+                    </span>
+
+                    <strong>
+                        Web Development
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="subject-quiz-card"
+                    data-subject="Computer Networks"
+                >
+
+                    <span>
+                        🔗
+                    </span>
+
+                    <strong>
+                        Computer Networks
+                    </strong>
+
+                    <small>
+                        20 Questions
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="subject-quiz-card"
+                    data-subject="Operating Systems"
+                >
+
+                    <span>
+                        ⚙️
+                    </span>
+
+                    <strong>
+                        Operating Systems
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DSA TOPICS ================= -->
+
+        <section
+            class="practice-section"
+            id="dsaSection"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        DSA Practice
+                    </h2>
+
+                    <p>
+                        Choose a topic to start practicing
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-grid">
+
+                <button class="practice-card">
+
+                    <span>
+                        📦
+                    </span>
+
+                    <strong>
+                        Arrays
+                    </strong>
+
+                    <small>
+                        Easy • 15 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card">
+
+                    <span>
+                        🔗
+                    </span>
+
+                    <strong>
+                        Linked Lists
+                    </strong>
+
+                    <small>
+                        Easy • 15 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card">
+
+                    <span>
+                        🌳
+                    </span>
+
+                    <strong>
+                        Trees
+                    </strong>
+
+                    <small>
+                        Medium • 20 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card">
+
+                    <span>
+                        🕸️
+                    </span>
+
+                    <strong>
+                        Graphs
+                    </strong>
+
+                    <small>
+                        Medium • 20 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card">
+
+                    <span>
+                        🔄
+                    </span>
+
+                    <strong>
+                        Sorting & Searching
+                    </strong>
+
+                    <small>
+                        Medium • 20 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card">
+
+                    <span>
+                        🧩
+                    </span>
+
+                    <strong>
+                        Algorithms
+                    </strong>
+
+                    <small>
+                        Hard • 25 Questions
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APTITUDE ================= -->
+
+        <section
+            class="practice-section"
+            id="aptitudeSection"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Aptitude Practice
+                    </h2>
+
+                    <p>
+                        Prepare for exams and placement tests
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-grid">
+
+                <button class="practice-card aptitude">
+
+                    <span>
+                        🔢
+                    </span>
+
+                    <strong>
+                        Quantitative Aptitude
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card aptitude">
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <strong>
+                        Logical Reasoning
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card aptitude">
+
+                    <span>
+                        🗣️
+                    </span>
+
+                    <strong>
+                        Verbal Ability
+                    </strong>
+
+                    <small>
+                        25 Questions
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card aptitude">
+
+                    <span>
+                        📊
+                    </span>
+
+                    <strong>
+                        Data Interpretation
+                    </strong>
+
+                    <small>
+                        20 Questions
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT RESULTS ================= -->
+
+        <section class="recent-results">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Recent Quiz Results
+                    </h2>
+
+                    <p>
+                        Track your previous performance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="results-table">
+
+
+                <div class="result-row result-header">
+
+                    <span>
+                        Quiz
+                    </span>
+
+                    <span>
+                        Questions
+                    </span>
+
+                    <span>
+                        Score
+                    </span>
+
+                    <span>
+                        Date
+                    </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <strong>
+                        Data Structures
+                    </strong>
+
+                    <span>
+                        20
+                    </span>
+
+                    <span class="score-good">
+                        17 / 20
+                    </span>
+
+                    <span>
+                        Aug 27, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <strong>
+                        Aptitude - Reasoning
+                    </strong>
+
+                    <span>
+                        20
+                    </span>
+
+                    <span class="score-average">
+                        14 / 20
+                    </span>
+
+                    <span>
+                        Aug 25, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <strong>
+                        Database Management
+                    </strong>
+
+                    <span>
+                        15
+                    </span>
+
+                    <span class="score-good">
+                        13 / 15
+                    </span>
+
+                    <span>
+                        Aug 23, 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/quiz.js"></script>
+
+</body>
+
+</html>
+```

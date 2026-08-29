@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher Profile | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher/profile.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="profile-container">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <div class="profile-header">
+
+        <div>
+
+            <p class="portal-label">
+                TEACHER PORTAL
+            </p>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p>
+                View your personal and professional information.
+            </p>
+
+        </div>
+
+
+        <a
+            href="/teacher/profile/edit"
+            class="edit-button"
+        >
+            ✏️ Edit Profile
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================
+         PROFILE CARD
+    ====================================== -->
+
+    <section class="profile-card">
+
+        <div class="profile-avatar">
+
+            <%= teacher.fullName
+                ? teacher.fullName.charAt(0).toUpperCase()
+                : "T"
+            %>
+
+        </div>
+
+
+        <div class="profile-main">
+
+            <h2>
+                <%= teacher.fullName %>
+            </h2>
+
+            <p>
+                <%= teacher.designation %>
+            </p>
+
+            <span class="employee-badge">
+                Employee ID:
+                <%= teacher.employeeId %>
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PERSONAL INFORMATION
+    ====================================== -->
+
+    <section class="info-card">
+
+        <h2>
+            Personal Information
+        </h2>
+
+        <p class="section-description">
+            Your basic personal details
+        </p>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-item">
+
+                <span>
+                    FULL NAME
+                </span>
+
+                <strong>
+                    <%= teacher.fullName || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    EMAIL ADDRESS
+                </span>
+
+                <strong>
+                    <%= teacher.email || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    PHONE NUMBER
+                </span>
+
+                <strong>
+                    <%= teacher.phone || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PROFESSIONAL INFORMATION
+    ====================================== -->
+
+    <section class="info-card">
+
+        <h2>
+            Professional Information
+        </h2>
+
+        <p class="section-description">
+            Your professional details
+        </p>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-item">
+
+                <span>
+                    EMPLOYEE ID
+                </span>
+
+                <strong>
+                    <%= teacher.employeeId || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    DEPARTMENT
+                </span>
+
+                <strong>
+                    <%= teacher.department || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    DESIGNATION
+                </span>
+
+                <strong>
+                    <%= teacher.designation || "Not provided" %>
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    ACCOUNT TYPE
+                </span>
+
+                <strong>
+                    Teacher
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BACK
+    ====================================== -->
+
+    <a
+        href="/teacher/dashboard"
+        class="back-button"
+    >
+        ← Back to Dashboard
+    </a>
+
+
+</div>
+
+</body>
+
+</html>

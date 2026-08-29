@@ -1,0 +1,1342 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #172033;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+select,
+input {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #101827;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 25px 22px;
+}
+
+.brand-logo {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: #4f46e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.brand-text h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-text span {
+    display: block;
+
+    color: #8d98aa;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   TEACHER MINI PROFILE
+===================================================== */
+
+.teacher-mini-profile {
+    margin: 10px 15px 20px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #182235;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.teacher-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.teacher-mini-info {
+    min-width: 0;
+}
+
+.teacher-mini-info strong {
+    display: block;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.teacher-mini-info span {
+    display: block;
+
+    color: #8d98aa;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   SIDEBAR NAVIGATION
+===================================================== */
+
+.sidebar-nav {
+    padding: 0 12px;
+
+    overflow-y: auto;
+}
+
+.nav-title {
+    color: #667186;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+
+    padding: 12px;
+}
+
+.secondary-title {
+    margin-top: 18px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px;
+
+    margin-bottom: 4px;
+
+    color: #adb7c8;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #1c273b;
+    color: white;
+}
+
+.nav-item.active {
+    background: #4f46e5;
+    color: white;
+}
+
+.nav-icon {
+    width: 24px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 15px;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    color: #adb7c8;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+.logout-btn:hover {
+    background: #1c273b;
+    color: white;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.main-content {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 28px 32px;
+}
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.page-title > span {
+    color: #6366f1;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.page-title h1 {
+    font-size: 27px;
+
+    margin-top: 6px;
+
+    font-weight: 700;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* MANAGE BUTTON */
+
+.manage-btn,
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.manage-btn:hover,
+.back-btn:hover {
+    background: #e0e7ff;
+}
+
+
+/* TOP PROFILE */
+
+.topbar-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.topbar-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #4f46e5;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.topbar-profile strong {
+    display: block;
+
+    font-size: 11px;
+}
+
+.topbar-profile span {
+    display: block;
+
+    color: #8b95a7;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   SYLLABUS INTRO
+===================================================== */
+
+.syllabus-intro {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.section-label,
+.card-label {
+    color: #6366f1;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+.syllabus-intro h2 {
+    font-size: 21px;
+
+    margin-top: 8px;
+}
+
+.syllabus-intro p {
+    color: #8994a7;
+
+    font-size: 10px;
+
+    margin-top: 7px;
+}
+
+
+/* SEMESTER */
+
+.semester-selector {
+    width: 210px;
+}
+
+.semester-selector label {
+    display: block;
+
+    color: #8994a7;
+
+    font-size: 8px;
+
+    margin-bottom: 7px;
+}
+
+.semester-selector select {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dfe3eb;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #273246;
+
+    font-size: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.semester-selector select:focus {
+    border-color: #6366f1;
+}
+
+
+/* =====================================================
+   OVERALL PROGRESS
+===================================================== */
+
+.overall-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px 28px;
+
+    margin-bottom: 22px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.overall-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.overall-content h3 {
+    font-size: 16px;
+
+    margin-top: 7px;
+}
+
+.overall-content p {
+    color: #8994a7;
+
+    font-size: 9px;
+
+    margin-top: 6px;
+}
+
+
+/* PERCENTAGE */
+
+.overall-percentage {
+    text-align: right;
+}
+
+.overall-percentage strong {
+    display: block;
+
+    color: #4f46e5;
+
+    font-size: 36px;
+
+    line-height: 1;
+}
+
+.overall-percentage span {
+    display: block;
+
+    color: #8994a7;
+
+    font-size: 9px;
+
+    margin-top: 6px;
+}
+
+
+/* LARGE PROGRESS BAR */
+
+.large-progress {
+    width: 100%;
+
+    height: 10px;
+
+    background: #edf0f5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 22px;
+}
+
+.large-progress div {
+    height: 100%;
+
+    background: #4f46e5;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* PROGRESS DETAILS */
+
+.progress-details {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 13px;
+}
+
+.progress-details span {
+    color: #8994a7;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   SUBJECT SECTION
+===================================================== */
+
+.subjects-section {
+    margin-bottom: 22px;
+}
+
+.section-heading {
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    font-size: 17px;
+
+    margin-top: 6px;
+}
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+/* SUBJECT CARD */
+
+.subject-card {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+
+    transition: 0.2s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.subject-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.subject-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+.subject-code {
+    color: #9ca3af;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+.subject-card h3 {
+    font-size: 12px;
+
+    margin-top: 14px;
+}
+
+.subject-card p {
+    color: #8994a7;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+
+/* SUBJECT PROGRESS */
+
+.subject-progress {
+    width: 100%;
+
+    height: 7px;
+
+    background: #edf0f5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 16px;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background: #4f46e5;
+
+    border-radius: 20px;
+}
+
+
+/* SUBJECT FOOTER */
+
+.subject-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+.subject-footer strong {
+    color: #4f46e5;
+
+    font-size: 11px;
+}
+
+.subject-footer span {
+    color: #9ca3af;
+
+    font-size: 8px;
+}
+
+.subject-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #4f46e5;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.subject-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TOPIC CARD
+===================================================== */
+
+.topics-card,
+.units-card,
+.topic-form,
+.manage-controls {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    margin-top: 20px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+}
+
+.card-header h3 {
+    font-size: 15px;
+
+    margin-top: 6px;
+}
+
+
+/* TOPIC ROW */
+
+.topic-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 6px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.topic-row:last-child {
+    border-bottom: none;
+}
+
+.topic-number {
+    color: #a0a8b5;
+
+    font-size: 9px;
+
+    width: 25px;
+}
+
+.topic-info {
+    flex: 1;
+}
+
+.topic-info strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.topic-info span {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 8px;
+
+    margin-top: 4px;
+}
+
+
+/* STATUS */
+
+.topic-status {
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.topic-status.completed {
+    color: #059669;
+
+    background: #ecfdf5;
+}
+
+.topic-status.in-progress {
+    color: #d97706;
+
+    background: #fffbeb;
+}
+
+.topic-status.pending {
+    color: #6b7280;
+
+    background: #f3f4f6;
+}
+
+
+/* =====================================================
+   MANAGE CONTROLS
+===================================================== */
+
+.manage-controls {
+    margin-top: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 15px;
+}
+
+.manage-controls .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #596579;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 11px;
+
+    border: 1px solid #dfe3eb;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: white;
+
+    font-size: 9px;
+
+    color: #374151;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #6366f1;
+}
+
+
+/* ADD BUTTON */
+
+.add-btn {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.add-btn:hover {
+    background: #4338ca;
+}
+
+
+/* =====================================================
+   TOPIC FORM
+===================================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr
+        180px;
+
+    gap: 15px;
+}
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.cancel-btn {
+    height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dfe3eb;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #596579;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #f8f9fc;
+}
+
+.save-btn {
+    height: 38px;
+
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #4338ca;
+}
+
+
+/* =====================================================
+   UNITS
+===================================================== */
+
+.progress-badge {
+    background: #ecfdf5;
+
+    color: #059669;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.unit {
+    border: 1px solid #edf0f4;
+
+    border-radius: 10px;
+
+    margin-bottom: 13px;
+
+    overflow: hidden;
+}
+
+.unit:last-child {
+    margin-bottom: 0;
+}
+
+.unit-header {
+    padding: 15px;
+
+    background: #fafbff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.unit-header > div > span {
+    color: #6366f1;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.unit-header h3 {
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+.unit-progress {
+    color: #4f46e5;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   MANAGE TOPICS
+===================================================== */
+
+.manage-topic {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-top: 1px solid #f0f1f4;
+}
+
+.topic-check {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.manage-topic.completed .topic-check {
+    background: #ecfdf5;
+
+    color: #059669;
+}
+
+.manage-topic.in-progress .topic-check {
+    background: #fffbeb;
+
+    color: #d97706;
+}
+
+.manage-topic.pending .topic-check {
+    background: #f3f4f6;
+
+    color: #9ca3af;
+}
+
+.manage-topic-info {
+    flex: 1;
+}
+
+.manage-topic-info strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.manage-topic-info span {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 8px;
+
+    margin-top: 4px;
+}
+
+
+/* EDIT / DELETE */
+
+.edit-topic,
+.delete-topic {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f8f9fc;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+
+.edit-topic:hover {
+    background: #eef2ff;
+}
+
+.delete-topic:hover {
+    background: #fef2f2;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .selection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 75px;
+    }
+
+    .brand {
+        justify-content: center;
+
+        padding: 18px 10px;
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    .teacher-mini-profile {
+        justify-content: center;
+
+        margin: 10px;
+    }
+
+    .teacher-mini-info {
+        display: none;
+    }
+
+    .nav-title {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+
+        padding: 13px 8px;
+    }
+
+    .nav-item span:not(.nav-icon) {
+        display: none;
+    }
+
+    .logout-btn {
+        justify-content: center;
+    }
+
+    .logout-btn span:last-child {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 75px;
+
+        padding: 20px;
+    }
+
+    .topbar-profile > div:last-child {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .topbar-right {
+        gap: 8px;
+    }
+
+    .manage-btn {
+        font-size: 8px;
+
+        padding: 8px 10px;
+    }
+
+    .syllabus-intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .semester-selector {
+        width: 100%;
+    }
+
+    .overall-content {
+        align-items: flex-start;
+    }
+
+    .overall-percentage strong {
+        font-size: 28px;
+    }
+
+    .progress-details {
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .topic-row {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .topic-status {
+        margin-left: 39px;
+    }
+
+    .manage-controls {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .page-title h1 {
+        font-size: 22px;
+    }
+
+    .overall-card,
+    .syllabus-intro,
+    .topics-card,
+    .units-card {
+        padding: 17px;
+    }
+
+}

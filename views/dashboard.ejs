@@ -1,0 +1,533 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Smart Academic System</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🎓</div>
+            <div>
+                <h2>SmartEdu</h2>
+                <span>Academic System</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="/dashboard" class="nav-item active">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="/attendance" class="nav-item">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="/syllabus" class="nav-item">
+                <span>📚</span>
+                Syllabus
+            </a>
+
+            <a href="/resources" class="nav-item">
+                <span>📖</span>
+                Resources
+            </a>
+
+            <a href="/quiz" class="nav-item">
+                <span>📝</span>
+                Quiz
+            </a>
+
+            <a href="/profile" class="nav-item">
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="/logout" class="nav-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+                <button class="menu-btn" id="menuBtn">☰</button>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back, Student 👋
+                </p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Student</strong>
+                        <small>Student ID: STU001</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon attendance-icon">
+                    📊
+                </div>
+
+                <div>
+                    <p>Attendance</p>
+                    <h2>87%</h2>
+                    <small class="success">
+                        ↑ 4% this month
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon syllabus-icon">
+                    📚
+                </div>
+
+                <div>
+                    <p>Syllabus</p>
+                    <h2>72%</h2>
+                    <small>
+                        18 of 25 topics
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon quiz-icon">
+                    📝
+                </div>
+
+                <div>
+                    <p>Quiz Average</p>
+                    <h2>84%</h2>
+                    <small class="success">
+                        Good performance
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon resource-icon">
+                    📖
+                </div>
+
+                <div>
+                    <p>Resources</p>
+                    <h2>24</h2>
+                    <small>
+                        Available materials
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Grid -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- Attendance -->
+
+            <div class="dashboard-card attendance-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Attendance Overview</h3>
+                        <p>Your attendance this semester</p>
+                    </div>
+
+                    <a href="/attendance">
+                        View Details →
+                    </a>
+
+                </div>
+
+                <div class="attendance-content">
+
+                    <div class="circle-progress">
+
+                        <div class="circle-inner">
+                            <strong>87%</strong>
+                            <span>Attendance</span>
+                        </div>
+
+                    </div>
+
+                    <div class="attendance-details">
+
+                        <div>
+                            <span class="dot present"></span>
+                            Present
+                            <strong>42</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot absent"></span>
+                            Absent
+                            <strong>5</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot leave"></span>
+                            Leave
+                            <strong>3</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Today's Classes -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Today's Classes</h3>
+                        <p>Friday, August 28</p>
+                    </div>
+
+                </div>
+
+                <div class="class-list">
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            <strong>09:00</strong>
+                            <span>10:00 AM</span>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Data Structures</strong>
+                            <span>Room 204 • Prof. Sharma</span>
+                        </div>
+
+                        <span class="class-status ongoing">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            <strong>11:00</strong>
+                            <span>12:00 PM</span>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Database Management</strong>
+                            <span>Room 302 • Prof. Roy</span>
+                        </div>
+
+                        <span class="class-status next">
+                            Next
+                        </span>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-time">
+                            <strong>02:00</strong>
+                            <span>03:00 PM</span>
+                        </div>
+
+                        <div class="class-info">
+                            <strong>Web Development</strong>
+                            <span>Lab 1 • Prof. Das</span>
+                        </div>
+
+                        <span class="class-status upcoming">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Syllabus -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Syllabus Progress</h3>
+                        <p>Current semester</p>
+                    </div>
+
+                    <a href="/syllabus">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="progress-list">
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>Data Structures</span>
+                            <strong>90%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div style="width: 90%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>Database Management</span>
+                            <strong>75%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div style="width: 75%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>Web Development</span>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div style="width: 65%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>Computer Networks</span>
+                            <strong>58%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div style="width: 58%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Recent Quizzes -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Quizzes</h3>
+                        <p>Your latest performance</p>
+                    </div>
+
+                    <a href="/quiz">
+                        Take Quiz →
+                    </a>
+
+                </div>
+
+
+                <div class="quiz-list">
+
+                    <div class="quiz-item">
+
+                        <div class="quiz-icon">
+                            📝
+                        </div>
+
+                        <div class="quiz-info">
+                            <strong>JavaScript Basics</strong>
+                            <span>10 Questions</span>
+                        </div>
+
+                        <div class="quiz-score">
+                            <strong>9/10</strong>
+                            <span>90%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quiz-item">
+
+                        <div class="quiz-icon">
+                            📝
+                        </div>
+
+                        <div class="quiz-info">
+                            <strong>MongoDB Fundamentals</strong>
+                            <span>10 Questions</span>
+                        </div>
+
+                        <div class="quiz-score">
+                            <strong>8/10</strong>
+                            <span>80%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quiz-item">
+
+                        <div class="quiz-icon">
+                            📝
+                        </div>
+
+                        <div class="quiz-info">
+                            <strong>HTML & CSS</strong>
+                            <span>10 Questions</span>
+                        </div>
+
+                        <div class="quiz-score">
+                            <strong>8/10</strong>
+                            <span>80%</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <h3>Quick Actions</h3>
+
+            <div class="action-grid">
+
+                <a href="/attendance" class="action-card">
+                    <span>📅</span>
+                    <strong>Mark Attendance</strong>
+                    <small>Scan classroom QR</small>
+                </a>
+
+                <a href="/syllabus" class="action-card">
+                    <span>📚</span>
+                    <strong>View Syllabus</strong>
+                    <small>Track your progress</small>
+                </a>
+
+                <a href="/resources" class="action-card">
+                    <span>📖</span>
+                    <strong>Study Resources</strong>
+                    <small>Notes & materials</small>
+                </a>
+
+                <a href="/quiz" class="action-card">
+                    <span>📝</span>
+                    <strong>Take a Quiz</strong>
+                    <small>Test your knowledge</small>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/dashboard.js"></script>
+
+</body>
+</html>
+

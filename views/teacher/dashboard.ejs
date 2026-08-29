@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher Dashboard | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEACHER PROFILE -->
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+
+            <% if (typeof user !== 'undefined' && user && user.name) { %>
+
+                <%= user.name.charAt(0).toUpperCase() %>
+
+            <% } else { %>
+
+                T
+
+            <% } %>
+
+        </div>
+
+
+        <div class="teacher-mini-info">
+
+            <strong>
+
+                <% if (typeof user !== 'undefined' && user && user.name) { %>
+
+                    <%= user.name %>
+
+                <% } else { %>
+
+                    Teacher Name
+
+                <% } %>
+
+            </strong>
+
+            <span>
+
+                <% if (typeof user !== 'undefined' && user && user.employeeId) { %>
+
+                    ID: <%= user.employeeId %>
+
+                <% } else { %>
+
+                    Teacher ID: EMP001
+
+                <% } %>
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- STUDENTS -->
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            <span>
+                Students
+            </span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                Attendance
+            </span>
+
+        </a>
+
+
+        <!-- SYLLABUS -->
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            <span>
+                Syllabus
+            </span>
+
+        </a>
+
+
+        <!-- RESOURCES -->
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            <span>
+                Resources
+            </span>
+
+        </a>
+
+
+        <!-- QUIZ -->
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            <span>
+                Quiz
+            </span>
+
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <!-- PROFILE -->
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Dashboard
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <button
+                class="notification-btn"
+                title="Notifications"
+            >
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <!-- TEACHER -->
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+
+                    <% if (typeof user !== 'undefined' && user && user.name) { %>
+
+                        <%= user.name.charAt(0).toUpperCase() %>
+
+                    <% } else { %>
+
+                        T
+
+                    <% } %>
+
+                </div>
+
+
+                <div>
+                    <span><%= teacher.fullName %></span>
+                    <span>
+                        <%= teacher.designation %>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         WELCOME
+    ================================================== -->
+
+    <section class="welcome-card">
+
+
+        <div class="welcome-content">
+
+            <span class="welcome-label">
+                WELCOME BACK 👋
+            </span>
+
+
+            <h2>
+                Good Morning, <%= teacher.fullName %>
+            </h2>
+
+
+            <p>
+                Here's what's happening with your students
+                and classes today.
+            </p>
+
+        </div>
+
+
+        <div class="welcome-date">
+
+            <span>
+                TODAY
+            </span>
+
+            <strong id="currentDate">
+                Loading...
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICS
+    ================================================== -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL STUDENTS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon students-icon">
+                👨‍🎓
+            </div>
+
+            <div class="stat-info">
+
+                <% recentStudents.forEach(function(student) { %>
+
+    <div class="student-row">
+
+        <div class="student-avatar">
+            <%= student.name
+                ? student.name.charAt(0).toUpperCase()
+                : "S" %>
+        </div>
+
+        <div class="student-details">
+            <strong>
+                <%= student.name || "Student" %>
+            </strong>
+
+            <span>
+                <%= student.studentId || student.rollNumber || "No ID" %>
+            </span>
+        </div>
+
+    </div>
+
+<% }); %>
+
+                <h2><%= totalStudents %></h2>
+
+                <small>
+                    Assigned to you
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRESENT -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon attendance-icon">
+                ✅
+            </div>
+
+            <div class="stat-info">
+
+                <span>
+                    PRESENT TODAY
+                </span>
+
+                <strong>
+                    108
+                </strong>
+
+                <small class="positive">
+                    90% attendance
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- AVERAGE -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon performance-icon">
+                📈
+            </div>
+
+            <div class="stat-info">
+
+                <span>
+                    AVG. ATTENDANCE
+                </span>
+
+                <strong>
+                    87%
+                </strong>
+
+                <small class="positive">
+                    +3.2% this month
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- PENDING -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending-icon">
+                ⏳
+            </div>
+
+            <div class="stat-info">
+
+                <span>
+                    PENDING TASKS
+                </span>
+
+                <strong>
+                    5
+                </strong>
+
+                <small>
+                    Requires attention
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTENT GRID
+    ================================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- =============================================
+             TODAY'S ATTENDANCE
+        ============================================== -->
+
+        <div class="dashboard-card attendance-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        ATTENDANCE
+                    </span>
+
+                    <h3>
+                        Today's Attendance
+                    </h3>
+
+                </div>
+
+
+                <a href="/teacher/attendance">
+                    View All →
+                </a>
+
+            </div>
+
+
+            <!-- ATTENDANCE SUMMARY -->
+
+            <div class="attendance-summary">
+
+
+                <div class="attendance-circle">
+
+                    <strong>
+                        90%
+                    </strong>
+
+                    <span>
+                        Present
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-numbers">
+
+                    <div>
+
+                        <span>
+                            Present
+                        </span>
+
+                        <strong>
+                            108
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Absent
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong>
+                            120
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="attendance-progress">
+
+                <div class="progress-header">
+
+                    <span>
+                        Attendance Progress
+                    </span>
+
+                    <strong>
+                        90%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        style="width: 90%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =============================================
+             QUICK ACTIONS
+        ============================================== -->
+
+        <div class="dashboard-card quick-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h3>
+                        What would you like to do?
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <a
+                    href="/teacher/attendance"
+                    class="quick-action"
+                >
+
+                    <div class="quick-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Take Attendance
+                        </strong>
+
+                        <span>
+                            Mark today's attendance
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="/teacher/syllabus/manage"
+                    class="quick-action"
+                >
+
+                    <div class="quick-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Update Syllabus
+                        </strong>
+
+                        <span>
+                            Manage topics and progress
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="/teacher/resources/manage"
+                    class="quick-action"
+                >
+
+                    <div class="quick-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Add Resource
+                        </strong>
+
+                        <span>
+                            Share learning material
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="/teacher/quiz/create"
+                    class="quick-action"
+                >
+
+                    <div class="quick-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Create Quiz
+                        </strong>
+
+                        <span>
+                            Create a new assessment
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         BOTTOM GRID
+    ================================================== -->
+
+    <section class="bottom-grid">
+
+
+        <!-- =============================================
+             RECENT STUDENTS
+        ============================================== -->
+
+        <div class="dashboard-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        STUDENTS
+                    </span>
+
+                    <h3>
+                        Recent Students
+                    </h3>
+
+                </div>
+
+
+                <a href="/teacher/students">
+                    View All →
+                </a>
+
+            </div>
+
+
+            student-list<div class="student-list">
+
+    <% if (recentStudents && recentStudents.length > 0) { %>
+
+        <% recentStudents.forEach(function(student) { %>
+
+            <div class="student-row">
+
+                <div class="student-avatar">
+                    <%= student.name
+                        ? student.name.charAt(0).toUpperCase()
+                        : "S" %>
+                </div>
+
+                <div class="student-details">
+
+                    <strong>
+                        <%= student.name || "Student" %>
+                    </strong>
+
+                    <span>
+                        <%= student.studentId || student.rollNumber || "No ID" %>
+                    </span>
+
+                </div>
+
+                <span class="status present">
+                    Student
+                </span>
+
+            </div>
+
+        <% }); %>
+
+    <% } else { %>
+
+        <div class="student-row">
+
+            <div class="student-details">
+
+                <strong>No students found</strong>
+
+                <span>
+                    Registered students will appear here.
+                </span>
+
+            </div>
+
+        </div>
+
+    <% } %>
+
+</div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             RECENT ACTIVITY
+        ============================================== -->
+
+        <div class="dashboard-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        ACTIVITY
+                    </span>
+
+                    <h3>
+                        Recent Activity
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity-list">
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Attendance completed
+                        </strong>
+
+                        <span>
+                            CSE - Section A
+                        </span>
+
+                    </div>
+
+                    <small>
+                        10 min ago
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Quiz created
+                        </strong>
+
+                        <span>
+                            Data Structures
+                        </span>
+
+                    </div>
+
+                    <small>
+                        1 hour ago
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Syllabus updated
+                        </strong>
+
+                        <span>
+                            Operating Systems
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Yesterday
+                    </small>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            New resource added
+                        </strong>
+
+                        <span>
+                            DBMS Notes
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Yesterday
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="/js/teacher-dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Take Attendance | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-attendance.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>
+                SmartEdu
+            </h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEACHER -->
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            <span>
+                Students
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                Attendance
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            <span>
+                Syllabus
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            <span>
+                Resources
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            <span>
+                Quiz
+            </span>
+
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Attendance
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a
+                href="/teacher/attendance/history"
+                class="history-btn"
+            >
+                📋 History
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE HEADER
+    ================================================== -->
+
+    <section class="attendance-intro">
+
+        <div>
+
+            <span class="section-label">
+                ATTENDANCE MANAGEMENT
+            </span>
+
+            <h2>
+                Take Attendance
+            </h2>
+
+            <p>
+                Mark today's attendance for your students.
+            </p>
+
+        </div>
+
+
+        <div class="date-display">
+
+            <span>
+                DATE
+            </span>
+
+            <strong id="attendanceDate">
+                Loading...
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CLASS SELECTION
+    ================================================= -->
+
+    <section class="selection-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    CLASS DETAILS
+                </span>
+
+                <h3>
+                    Select Class
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="selection-grid">
+
+
+            <!-- SUBJECT -->
+
+            <div class="form-group">
+
+                <label>
+                    Subject
+                </label>
+
+                <select id="subjectSelect">
+
+                    <option value="">
+                        Select Subject
+                    </option>
+
+                    <option value="dsa">
+                        Data Structures & Algorithms
+                    </option>
+
+                    <option value="dbms">
+                        Database Management System
+                    </option>
+
+                    <option value="os">
+                        Operating Systems
+                    </option>
+
+                    <option value="cn">
+                        Computer Networks
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SEMESTER -->
+
+            <div class="form-group">
+
+                <label>
+                    Semester
+                </label>
+
+                <select id="semesterSelect">
+
+                    <option value="">
+                        Select Semester
+                    </option>
+
+                    <option value="1">
+                        Semester 1
+                    </option>
+
+                    <option value="2">
+                        Semester 2
+                    </option>
+
+                    <option value="3">
+                        Semester 3
+                    </option>
+
+                    <option value="4" selected>
+                        Semester 4
+                    </option>
+
+                    <option value="5">
+                        Semester 5
+                    </option>
+
+                    <option value="6">
+                        Semester 6
+                    </option>
+
+                    <option value="7">
+                        Semester 7
+                    </option>
+
+                    <option value="8">
+                        Semester 8
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SECTION -->
+
+            <div class="form-group">
+
+                <label>
+                    Section
+                </label>
+
+                <select id="sectionSelect">
+
+                    <option value="">
+                        Select Section
+                    </option>
+
+                    <option value="A" selected>
+                        Section A
+                    </option>
+
+                    <option value="B">
+                        Section B
+                    </option>
+
+                    <option value="C">
+                        Section C
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            type="button"
+            id="loadStudents"
+            class="load-btn"
+        >
+
+            Load Students →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ATTENDANCE AREA
+    ================================================== -->
+
+    <section
+        class="attendance-card"
+        id="attendanceSection"
+    >
+
+
+        <!-- HEADER -->
+
+        <div class="card-header attendance-header">
+
+            <div>
+
+                <span class="card-label">
+                    STUDENT ATTENDANCE
+                </span>
+
+                <h3>
+                    Mark Attendance
+                </h3>
+
+            </div>
+
+
+            <div class="attendance-actions">
+
+                <button
+                    type="button"
+                    id="markAllPresent"
+                    class="secondary-btn"
+                >
+                    ✓ Mark All Present
+                </button>
+
+                <button
+                    type="button"
+                    id="markAllAbsent"
+                    class="secondary-btn danger-btn"
+                >
+                    ✕ Mark All Absent
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div class="attendance-summary">
+
+
+            <div class="summary-box">
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="totalStudents">
+                    6
+                </strong>
+
+            </div>
+
+
+            <div class="summary-box present-summary">
+
+                <span>
+                    PRESENT
+                </span>
+
+                <strong id="presentCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-box absent-summary">
+
+                <span>
+                    ABSENT
+                </span>
+
+                <strong id="absentCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-box percentage-summary">
+
+                <span>
+                    PERCENTAGE
+                </span>
+
+                <strong id="attendancePercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- STUDENT LIST -->
+
+        <div class="attendance-list">
+
+
+            <!-- STUDENT 1 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU001"
+            >
+
+                <div class="student-number">
+                    01
+                </div>
+
+
+                <div class="student-avatar">
+                    R
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Rahul Sharma
+                    </strong>
+
+                    <span>
+                        STU001 • CSE2026001
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDENT 2 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU002"
+            >
+
+                <div class="student-number">
+                    02
+                </div>
+
+
+                <div class="student-avatar">
+                    A
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Amit Kumar
+                    </strong>
+
+                    <span>
+                        STU002 • CSE2026002
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDENT 3 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU003"
+            >
+
+                <div class="student-number">
+                    03
+                </div>
+
+
+                <div class="student-avatar">
+                    P
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Priya Das
+                    </strong>
+
+                    <span>
+                        STU003 • CSE2026003
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDENT 4 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU004"
+            >
+
+                <div class="student-number">
+                    04
+                </div>
+
+
+                <div class="student-avatar">
+                    S
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Sneha Roy
+                    </strong>
+
+                    <span>
+                        STU004 • CSE2026004
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDENT 5 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU005"
+            >
+
+                <div class="student-number">
+                    05
+                </div>
+
+
+                <div class="student-avatar">
+                    A
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Arjun Singh
+                    </strong>
+
+                    <span>
+                        STU005 • CSE2026005
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STUDENT 6 -->
+
+            <div
+                class="attendance-student"
+                data-student-id="STU006"
+            >
+
+                <div class="student-number">
+                    06
+                </div>
+
+
+                <div class="student-avatar">
+                    N
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Neha Gupta
+                    </strong>
+
+                    <span>
+                        STU006 • CSE2026006
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-status">
+
+                    <button
+                        type="button"
+                        class="attendance-btn present-btn"
+                        data-status="present"
+                    >
+                        ✓ Present
+                    </button>
+
+                    <button
+                        type="button"
+                        class="attendance-btn absent-btn"
+                        data-status="absent"
+                    >
+                        ✕ Absent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SUBMIT -->
+
+        <div class="submit-area">
+
+            <p>
+                Make sure every student has been marked
+                before submitting.
+            </p>
+
+            <button
+                type="button"
+                id="submitAttendance"
+                class="submit-btn"
+            >
+
+                Submit Attendance
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="/js/teacher-attendance.js"></script>
+
+</body>
+
+</html>

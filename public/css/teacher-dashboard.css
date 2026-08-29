@@ -1,0 +1,1041 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #101827;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 25px 22px;
+}
+
+.brand-logo {
+    width: 43px;
+    height: 43px;
+
+    background: #4f46e5;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.brand-text h2 {
+    font-size: 18px;
+}
+
+.brand-text span {
+    display: block;
+
+    color: #8994a8;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* TEACHER MINI PROFILE */
+
+.teacher-mini-profile {
+    margin: 10px 15px 20px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #182235;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.teacher-avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.teacher-mini-info {
+    min-width: 0;
+}
+
+.teacher-mini-info strong {
+    display: block;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.teacher-mini-info span {
+    display: block;
+
+    color: #8994a8;
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* NAV */
+
+.sidebar-nav {
+    padding: 0 12px;
+
+    overflow-y: auto;
+}
+
+.nav-title {
+    color: #647086;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    padding: 12px 12px 8px;
+}
+
+.secondary-title {
+    margin-top: 18px;
+}
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px;
+
+    margin-bottom: 4px;
+
+    color: #aeb8c9;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    background: #1b2639;
+
+    color: white;
+}
+
+.nav-item.active {
+    background: #4f46e5;
+
+    color: white;
+}
+
+.nav-icon {
+    width: 23px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* LOGOUT */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 15px;
+}
+
+.logout-btn {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    color: #aeb8c9;
+
+    font-size: 11px;
+
+    border-radius: 9px;
+}
+
+.logout-btn:hover {
+    background: #1b2639;
+
+    color: white;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 25px 30px;
+}
+
+
+/* TOPBAR */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.page-title > span {
+    color: #6366f1;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.page-title h1 {
+    font-size: 25px;
+
+    margin-top: 5px;
+}
+
+.topbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.notification-btn {
+    position: relative;
+
+    border: none;
+
+    background: white;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.notification-dot {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 6px;
+    height: 6px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+}
+
+.topbar-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.topbar-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #4f46e5;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+.topbar-profile strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.topbar-profile span {
+    display: block;
+
+    color: #8b95a7;
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   WELCOME CARD
+========================================= */
+
+.welcome-card {
+    background: #4f46e5;
+
+    color: white;
+
+    border-radius: 15px;
+
+    padding: 25px 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.welcome-label {
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.75;
+}
+
+.welcome-content h2 {
+    font-size: 22px;
+
+    margin: 8px 0;
+}
+
+.welcome-content p {
+    font-size: 10px;
+
+    opacity: 0.8;
+}
+
+.welcome-date {
+    text-align: right;
+
+    padding-left: 30px;
+}
+
+.welcome-date span {
+    display: block;
+
+    font-size: 8px;
+
+    opacity: 0.7;
+
+    margin-bottom: 5px;
+}
+
+.welcome-date strong {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: white;
+
+    border-radius: 13px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.students-icon {
+    background: #eef2ff;
+}
+
+.attendance-icon {
+    background: #ecfdf5;
+}
+
+.performance-icon {
+    background: #eff6ff;
+}
+
+.pending-icon {
+    background: #fff7ed;
+}
+
+.stat-info span {
+    display: block;
+
+    color: #8b95a7;
+
+    font-size: 7px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 4px;
+}
+
+.stat-info strong {
+    display: block;
+
+    font-size: 21px;
+}
+
+.stat-info small {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+}
+
+.stat-info .positive {
+    color: #10b981;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.dashboard-card {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 21px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.card-label {
+    display: block;
+
+    color: #6366f1;
+
+    font-size: 7px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.card-header h3 {
+    font-size: 14px;
+}
+
+.card-header a {
+    color: #4f46e5;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ATTENDANCE
+========================================= */
+
+.attendance-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-bottom: 25px;
+}
+
+.attendance-circle {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    border: 10px solid #e0e7ff;
+
+    outline: 3px solid #4f46e5;
+
+    outline-offset: -10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance-circle strong {
+    font-size: 20px;
+}
+
+.attendance-circle span {
+    color: #8b95a7;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+}
+
+.attendance-numbers {
+    display: flex;
+
+    gap: 25px;
+}
+
+.attendance-numbers span {
+    display: block;
+
+    color: #8b95a7;
+
+    font-size: 8px;
+
+    margin-bottom: 5px;
+}
+
+.attendance-numbers strong {
+    font-size: 18px;
+}
+
+.attendance-progress {
+    margin-top: 10px;
+}
+
+.progress-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+.progress-header span {
+    color: #8b95a7;
+
+    font-size: 8px;
+}
+
+.progress-header strong {
+    font-size: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 7px;
+
+    background: #edf0f5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background: #4f46e5;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.quick-action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid #eef0f4;
+
+    border-radius: 9px;
+
+    color: #172033;
+
+    transition: 0.2s;
+}
+
+.quick-action:hover {
+    border-color: #c7d2fe;
+
+    background: #f8f9ff;
+}
+
+.quick-icon {
+    width: 32px;
+    height: 32px;
+
+    background: #eef2ff;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.quick-action div:nth-child(2) {
+    flex: 1;
+}
+
+.quick-action strong {
+    display: block;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+.quick-action span {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 7px;
+}
+
+.quick-action b {
+    color: #6366f1;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BOTTOM GRID
+========================================= */
+
+.bottom-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* STUDENTS */
+
+.student-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.student-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 5px;
+
+    border-bottom: 1px solid #f1f2f5;
+}
+
+.student-avatar {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 8px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.student-details {
+    flex: 1;
+}
+
+.student-details strong {
+    display: block;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+.student-details span {
+    color: #9ca3af;
+
+    font-size: 7px;
+}
+
+.status {
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    font-size: 7px;
+
+    font-weight: 600;
+}
+
+.status.present {
+    color: #059669;
+
+    background: #ecfdf5;
+}
+
+.status.absent {
+    color: #dc2626;
+
+    background: #fef2f2;
+}
+
+
+/* =========================================
+   ACTIVITY
+========================================= */
+
+.activity-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.activity-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f1f2f5;
+}
+
+.activity-icon {
+    width: 30px;
+    height: 30px;
+
+    background: #f5f3ff;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+.activity-item > div:nth-child(2) {
+    flex: 1;
+}
+
+.activity-item strong {
+    display: block;
+
+    font-size: 8px;
+
+    margin-bottom: 3px;
+}
+
+.activity-item span {
+    color: #9ca3af;
+
+    font-size: 7px;
+}
+
+.activity-item small {
+    color: #9ca3af;
+
+    font-size: 6px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-grid,
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .brand {
+        justify-content: center;
+
+        padding: 18px 10px;
+    }
+
+    .brand-text,
+    .teacher-mini-info,
+    .nav-title,
+    .nav-item span:not(.nav-icon),
+    .logout-btn span:last-child {
+        display: none;
+    }
+
+    .teacher-mini-profile {
+        justify-content: center;
+
+        margin: 10px;
+    }
+
+    .nav-item {
+        justify-content: center;
+    }
+
+    .sidebar-bottom {
+        padding: 10px;
+    }
+
+    .logout-btn {
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 70px;
+
+        padding: 18px;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .welcome-date {
+        text-align: left;
+
+        padding-left: 0;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar-profile > div:last-child {
+        display: none;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .attendance-summary {
+        gap: 20px;
+    }
+
+    .attendance-numbers {
+        gap: 12px;
+    }
+
+}

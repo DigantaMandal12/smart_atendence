@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Syllabus | Teacher | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-syllabus.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+            <span class="nav-icon">📊</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+            <span class="nav-icon">👨‍🎓</span>
+            <span>Students</span>
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+            <span class="nav-icon">📅</span>
+            <span>Attendance</span>
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item active"
+        >
+            <span class="nav-icon">📚</span>
+            <span>Syllabus</span>
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+            <span class="nav-icon">📖</span>
+            <span>Resources</span>
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+            <span class="nav-icon">📝</span>
+            <span>Quiz</span>
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+            <span class="nav-icon">👤</span>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>🚪</span>
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Syllabus
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a
+                href="/teacher/syllabus/manage"
+                class="manage-btn"
+            >
+                ⚙ Manage Syllabus
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+    <section class="syllabus-intro">
+
+        <div>
+
+            <span class="section-label">
+                ACADEMIC MANAGEMENT
+            </span>
+
+            <h2>
+                Syllabus Progress
+            </h2>
+
+            <p>
+                Track subject-wise syllabus completion
+                for your classes.
+            </p>
+
+        </div>
+
+
+        <div class="semester-selector">
+
+            <label>
+                Academic Semester
+            </label>
+
+            <select id="semesterSelect">
+
+                <option value="1">
+                    Semester 1
+                </option>
+
+                <option value="2">
+                    Semester 2
+                </option>
+
+                <option value="3">
+                    Semester 3
+                </option>
+
+                <option value="4" selected>
+                    Semester 4
+                </option>
+
+                <option value="5">
+                    Semester 5
+                </option>
+
+                <option value="6">
+                    Semester 6
+                </option>
+
+                <option value="7">
+                    Semester 7
+                </option>
+
+                <option value="8">
+                    Semester 8
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OVERALL PROGRESS
+    ===================================================== -->
+
+    <section class="overall-card">
+
+        <div class="overall-content">
+
+            <div>
+
+                <span class="card-label">
+                    SEMESTER 4
+                </span>
+
+                <h3>
+                    Overall Syllabus Completion
+                </h3>
+
+                <p>
+                    Current academic semester progress
+                </p>
+
+            </div>
+
+
+            <div class="overall-percentage">
+
+                <strong>
+                    68%
+                </strong>
+
+                <span>
+                    Completed
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="large-progress">
+
+            <div style="width:68%"></div>
+
+        </div>
+
+
+        <div class="progress-details">
+
+            <span>
+                ✓ 34 Topics Completed
+            </span>
+
+            <span>
+                16 Topics Remaining
+            </span>
+
+            <span>
+                50 Total Topics
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUBJECTS
+    ===================================================== -->
+
+    <section class="subjects-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    SUBJECTS
+                </span>
+
+                <h2>
+                    Subject-wise Progress
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="subject-grid">
+
+
+            <!-- DSA -->
+
+            <div class="subject-card">
+
+                <div class="subject-top">
+
+                    <div class="subject-icon">
+                        💻
+                    </div>
+
+                    <span class="subject-code">
+                        CSE401
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Data Structures & Algorithms
+                </h3>
+
+                <p>
+                    8 of 10 units completed
+                </p>
+
+
+                <div class="subject-progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:80%"
+                    ></div>
+
+                </div>
+
+
+                <div class="subject-footer">
+
+                    <strong>
+                        80%
+                    </strong>
+
+                    <span>
+                        2 topics remaining
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="/teacher/syllabus/manage?subject=dsa"
+                    class="subject-btn"
+                >
+                    Manage →
+                </a>
+
+            </div>
+
+
+
+            <!-- DBMS -->
+
+            <div class="subject-card">
+
+                <div class="subject-top">
+
+                    <div class="subject-icon">
+                        🗄️
+                    </div>
+
+                    <span class="subject-code">
+                        CSE402
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Database Management System
+                </h3>
+
+                <p>
+                    7 of 10 units completed
+                </p>
+
+
+                <div class="subject-progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:70%"
+                    ></div>
+
+                </div>
+
+
+                <div class="subject-footer">
+
+                    <strong>
+                        70%
+                    </strong>
+
+                    <span>
+                        3 topics remaining
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="/teacher/syllabus/manage?subject=dbms"
+                    class="subject-btn"
+                >
+                    Manage →
+                </a>
+
+            </div>
+
+
+
+            <!-- OS -->
+
+            <div class="subject-card">
+
+                <div class="subject-top">
+
+                    <div class="subject-icon">
+                        ⚙️
+                    </div>
+
+                    <span class="subject-code">
+                        CSE403
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Operating Systems
+                </h3>
+
+                <p>
+                    6 of 10 units completed
+                </p>
+
+
+                <div class="subject-progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:60%"
+                    ></div>
+
+                </div>
+
+
+                <div class="subject-footer">
+
+                    <strong>
+                        60%
+                    </strong>
+
+                    <span>
+                        4 topics remaining
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="/teacher/syllabus/manage?subject=os"
+                    class="subject-btn"
+                >
+                    Manage →
+                </a>
+
+            </div>
+
+
+
+            <!-- COMPUTER NETWORK -->
+
+            <div class="subject-card">
+
+                <div class="subject-top">
+
+                    <div class="subject-icon">
+                        🌐
+                    </div>
+
+                    <span class="subject-code">
+                        CSE404
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Computer Networks
+                </h3>
+
+                <p>
+                    7 of 10 units completed
+                </p>
+
+
+                <div class="subject-progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:70%"
+                    ></div>
+
+                </div>
+
+
+                <div class="subject-footer">
+
+                    <strong>
+                        70%
+                    </strong>
+
+                    <span>
+                        3 topics remaining
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="/teacher/syllabus/manage?subject=cn"
+                    class="subject-btn"
+                >
+                    Manage →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECENT TOPICS
+    ===================================================== -->
+
+    <section class="topics-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    RECENT PROGRESS
+                </span>
+
+                <h3>
+                    Topic Status
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="topic-list">
+
+
+            <div class="topic-row">
+
+                <div class="topic-number">
+                    01
+                </div>
+
+                <div class="topic-info">
+
+                    <strong>
+                        Binary Search Trees
+                    </strong>
+
+                    <span>
+                        Data Structures & Algorithms
+                    </span>
+
+                </div>
+
+                <span class="topic-status completed">
+                    ✓ Completed
+                </span>
+
+            </div>
+
+
+            <div class="topic-row">
+
+                <div class="topic-number">
+                    02
+                </div>
+
+                <div class="topic-info">
+
+                    <strong>
+                        SQL Joins
+                    </strong>
+
+                    <span>
+                        Database Management System
+                    </span>
+
+                </div>
+
+                <span class="topic-status completed">
+                    ✓ Completed
+                </span>
+
+            </div>
+
+
+            <div class="topic-row">
+
+                <div class="topic-number">
+                    03
+                </div>
+
+                <div class="topic-info">
+
+                    <strong>
+                        Process Scheduling
+                    </strong>
+
+                    <span>
+                        Operating Systems
+                    </span>
+
+                </div>
+
+                <span class="topic-status in-progress">
+                    ● In Progress
+                </span>
+
+            </div>
+
+
+            <div class="topic-row">
+
+                <div class="topic-number">
+                    04
+                </div>
+
+                <div class="topic-info">
+
+                    <strong>
+                        Network Layer
+                    </strong>
+
+                    <span>
+                        Computer Networks
+                    </span>
+
+                </div>
+
+                <span class="topic-status pending">
+                    ○ Pending
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+</body>
+
+</html>

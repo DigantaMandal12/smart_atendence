@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Quiz | Teacher | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-quiz.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>Teacher Portal</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TEACHER -->
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>Teacher Name</strong>
+
+            <span>ID: EMP001</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            Dashboard
+
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            Students
+
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            Attendance
+
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            Syllabus
+
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            Resources
+
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            Quiz
+
+        </a>
+
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            Profile
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Quiz Management
+            </h1>
+
+        </div>
+
+
+
+        <div class="topbar-right">
+
+
+            <a
+                href="/teacher/quiz/create"
+                class="create-btn"
+            >
+
+                + Create Quiz
+
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         STATISTICS
+    ===================================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📝
+            </div>
+
+            <div>
+
+                <span>
+                    TOTAL QUIZZES
+                </span>
+
+                <strong>
+                    24
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📚
+            </div>
+
+            <div>
+
+                <span>
+                    SUBJECT QUIZZES
+                </span>
+
+                <strong>
+                    12
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                💻
+            </div>
+
+            <div>
+
+                <span>
+                    DSA QUIZZES
+                </span>
+
+                <strong>
+                    7
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🧠
+            </div>
+
+            <div>
+
+                <span>
+                    APTITUDE QUIZZES
+                </span>
+
+                <strong>
+                    5
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUIZ CATEGORY
+===================================================== -->
+
+    <section class="category-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    QUIZ CATEGORIES
+                </span>
+
+                <h2>
+                    Choose Quiz Type
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="category-grid">
+
+
+            <!-- SUBJECT -->
+
+            <a
+                href="#subject"
+                class="category-card subject-card"
+            >
+
+                <div class="category-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <h3>
+                        Subject Wise Quiz
+                    </h3>
+
+                    <p>
+                        Create quizzes based on
+                        college subjects and syllabus.
+                    </p>
+
+                </div>
+
+                <strong>
+                    12 Quizzes →
+                </strong>
+
+            </a>
+
+
+
+            <!-- DSA -->
+
+            <a
+                href="#dsa"
+                class="category-card dsa-card"
+            >
+
+                <div class="category-icon">
+                    💻
+                </div>
+
+                <div>
+
+                    <h3>
+                        DSA Quiz
+                    </h3>
+
+                    <p>
+                        Test students on data structures
+                        and algorithms.
+                    </p>
+
+                </div>
+
+                <strong>
+                    7 Quizzes →
+                </strong>
+
+            </a>
+
+
+
+            <!-- APTITUDE -->
+
+            <a
+                href="#aptitude"
+                class="category-card aptitude-card"
+            >
+
+                <div class="category-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <h3>
+                        Aptitude Quiz
+                    </h3>
+
+                    <p>
+                        Practice quantitative aptitude,
+                        reasoning and verbal ability.
+                    </p>
+
+                </div>
+
+                <strong>
+                    5 Quizzes →
+                </strong>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FILTER
+===================================================== -->
+
+    <section class="filter-card">
+
+
+        <div class="filter-group">
+
+            <label>
+                CATEGORY
+            </label>
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="subject">
+                    Subject Wise
+                </option>
+
+                <option value="dsa">
+                    DSA
+                </option>
+
+                <option value="aptitude">
+                    Aptitude
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="filter-group">
+
+            <label>
+                STATUS
+            </label>
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="published">
+                    Published
+                </option>
+
+                <option value="draft">
+                    Draft
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="search-box">
+
+            <label>
+                SEARCH
+            </label>
+
+            <input
+                type="text"
+                id="quizSearch"
+                placeholder="Search quiz..."
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUIZ LIST
+===================================================== -->
+
+    <section class="quiz-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    QUIZ LIBRARY
+                </span>
+
+                <h2>
+                    Your Quizzes
+                </h2>
+
+            </div>
+
+
+            <span class="quiz-count">
+                24 Quizzes
+            </span>
+
+        </div>
+
+
+
+        <div class="quiz-list" id="quizList">
+
+
+            <!-- =================================================
+                 QUIZ 1
+            ================================================= -->
+
+            <div
+                class="quiz-item"
+                data-category="subject"
+                data-status="published"
+            >
+
+
+                <div class="quiz-icon subject">
+                    📚
+                </div>
+
+
+                <div class="quiz-info">
+
+                    <div class="quiz-title-row">
+
+                        <h3>
+                            Data Structures - Unit 1
+                        </h3>
+
+                        <span class="status published">
+                            Published
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Arrays, Linked Lists and
+                        basic data structures.
+                    </p>
+
+
+                    <div class="quiz-meta">
+
+                        <span>
+                            📚 Subject Wise
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            20 Questions
+                        </span>
+
+                        <span>
+                            30 Minutes
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quiz-stats">
+
+                    <strong>
+                        86
+                    </strong>
+
+                    <span>
+                        Attempts
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-actions">
+
+                    <a
+                        href="/teacher/quiz/1/questions"
+                        title="Questions"
+                    >
+                        ❓
+                    </a>
+
+                    <a
+                        href="/teacher/quiz/1/edit"
+                        title="Edit"
+                    >
+                        ✏️
+                    </a>
+
+                    <button
+                        type="button"
+                        title="Delete"
+                    >
+                        🗑️
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUIZ 2
+            ================================================= -->
+
+            <div
+                class="quiz-item"
+                data-category="dsa"
+                data-status="published"
+            >
+
+
+                <div class="quiz-icon dsa">
+                    💻
+                </div>
+
+
+                <div class="quiz-info">
+
+                    <div class="quiz-title-row">
+
+                        <h3>
+                            Binary Trees Challenge
+                        </h3>
+
+                        <span class="status published">
+                            Published
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Binary trees, BST and tree
+                        traversal algorithms.
+                    </p>
+
+
+                    <div class="quiz-meta">
+
+                        <span>
+                            💻 DSA
+                        </span>
+
+                        <span>
+                            Advanced
+                        </span>
+
+                        <span>
+                            15 Questions
+                        </span>
+
+                        <span>
+                            25 Minutes
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quiz-stats">
+
+                    <strong>
+                        64
+                    </strong>
+
+                    <span>
+                        Attempts
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-actions">
+
+                    <a
+                        href="/teacher/quiz/2/questions"
+                    >
+                        ❓
+                    </a>
+
+                    <a
+                        href="/teacher/quiz/2/edit"
+                    >
+                        ✏️
+                    </a>
+
+                    <button
+                        type="button"
+                    >
+                        🗑️
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUIZ 3
+            ================================================= -->
+
+            <div
+                class="quiz-item"
+                data-category="aptitude"
+                data-status="published"
+            >
+
+
+                <div class="quiz-icon aptitude">
+                    🧠
+                </div>
+
+
+                <div class="quiz-info">
+
+                    <div class="quiz-title-row">
+
+                        <h3>
+                            Quantitative Aptitude - Basics
+                        </h3>
+
+                        <span class="status published">
+                            Published
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Number system, percentages,
+                        ratios and averages.
+                    </p>
+
+
+                    <div class="quiz-meta">
+
+                        <span>
+                            🧠 Aptitude
+                        </span>
+
+                        <span>
+                            Easy
+                        </span>
+
+                        <span>
+                            25 Questions
+                        </span>
+
+                        <span>
+                            30 Minutes
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quiz-stats">
+
+                    <strong>
+                        121
+                    </strong>
+
+                    <span>
+                        Attempts
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-actions">
+
+                    <a
+                        href="/teacher/quiz/3/questions"
+                    >
+                        ❓
+                    </a>
+
+                    <a
+                        href="/teacher/quiz/3/edit"
+                    >
+                        ✏️
+                    </a>
+
+                    <button
+                        type="button"
+                    >
+                        🗑️
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUIZ 4 - DRAFT
+            ================================================= -->
+
+            <div
+                class="quiz-item"
+                data-category="subject"
+                data-status="draft"
+            >
+
+
+                <div class="quiz-icon subject">
+                    📚
+                </div>
+
+
+                <div class="quiz-info">
+
+                    <div class="quiz-title-row">
+
+                        <h3>
+                            Operating Systems - Unit 2
+                        </h3>
+
+                        <span class="status draft">
+                            Draft
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Process scheduling and
+                        CPU management.
+                    </p>
+
+
+                    <div class="quiz-meta">
+
+                        <span>
+                            📚 Subject Wise
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            0 Questions
+                        </span>
+
+                        <span>
+                            Not Published
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quiz-stats">
+
+                    <strong>
+                        —
+                    </strong>
+
+                    <span>
+                        Attempts
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-actions">
+
+                    <a
+                        href="/teacher/quiz/4/questions"
+                    >
+                        ❓
+                    </a>
+
+                    <a
+                        href="/teacher/quiz/4/edit"
+                    >
+                        ✏️
+                    </a>
+
+                    <button
+                        type="button"
+                    >
+                        🗑️
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script>
+
+const categoryFilter =
+    document.getElementById("categoryFilter");
+
+const statusFilter =
+    document.getElementById("statusFilter");
+
+const searchInput =
+    document.getElementById("quizSearch");
+
+const quizItems =
+    document.querySelectorAll(".quiz-item");
+
+
+function filterQuizzes() {
+
+    const category =
+        categoryFilter.value;
+
+    const status =
+        statusFilter.value;
+
+    const search =
+        searchInput.value.toLowerCase();
+
+
+    quizItems.forEach(function (quiz) {
+
+        const quizCategory =
+            quiz.dataset.category;
+
+        const quizStatus =
+            quiz.dataset.status;
+
+        const title =
+            quiz
+                .querySelector("h3")
+                .textContent
+                .toLowerCase();
+
+
+        const categoryMatch =
+            category === "all" ||
+            quizCategory === category;
+
+
+        const statusMatch =
+            status === "all" ||
+            quizStatus === status;
+
+
+        const searchMatch =
+            title.includes(search);
+
+
+        if (
+            categoryMatch &&
+            statusMatch &&
+            searchMatch
+        ) {
+
+            quiz.style.display = "flex";
+
+        } else {
+
+            quiz.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+categoryFilter.addEventListener(
+    "change",
+    filterQuizzes
+);
+
+statusFilter.addEventListener(
+    "change",
+    filterQuizzes
+);
+
+searchInput.addEventListener(
+    "input",
+    filterQuizzes
+);
+
+</script>
+
+
+</body>
+
+</html>

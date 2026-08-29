@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Smart Academic System</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <div class="logo">
+                🎓
+            </div>
+
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Login to Smart Academic System</p>
+
+            <% if (typeof error !== 'undefined' && error) { %>
+                <div class="error-message">
+                    <%= error %>
+                </div>
+            <% } %>
+
+    <form action="/login" method="POST">
+        <div class="input-group">
+    <label>Email</label>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+    >
+
+    <label>Password</label>
+
+    <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+    >
+
+    <button type="submit" class="auth-btn">
+        Login
+    </button>
+    </div>
+</form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <p class="signup-text">
+                Don't have an account?
+                <a href="/signup">Create Account</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

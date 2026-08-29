@@ -1,0 +1,473 @@
+/* =====================================
+   QUIZ HERO
+===================================== */
+
+.quiz-hero {
+    background: #111827;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.hero-label {
+    color: #a5b4fc;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.quiz-hero h2 {
+    font-size: 26px;
+
+    margin: 8px 0;
+}
+
+.quiz-hero p {
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    max-width: 560px;
+}
+
+.quiz-hero-icon {
+    width: 90px;
+
+    height: 90px;
+
+    background: #312e81;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 42px;
+}
+
+
+/* =====================================
+   SECTION
+===================================== */
+
+.section-heading {
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+/* =====================================
+   QUIZ TYPES
+===================================== */
+
+.quiz-types {
+    margin-bottom: 30px;
+}
+
+.quiz-type-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.quiz-type-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+
+    gap: 17px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+
+    transition: 0.2s;
+}
+
+.quiz-type-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.quiz-type-icon {
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+}
+
+.subject-card .quiz-type-icon {
+    background: #eef2ff;
+}
+
+.dsa-card .quiz-type-icon {
+    background: #e0f2fe;
+}
+
+.aptitude-card .quiz-type-icon {
+    background: #fef3c7;
+}
+
+.quiz-type-content {
+    flex: 1;
+}
+
+.quiz-label {
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: #4f46e5;
+
+    letter-spacing: 1px;
+}
+
+.quiz-type-content h3 {
+    font-size: 15px;
+
+    margin: 6px 0;
+}
+
+.quiz-type-content p {
+    color: #9ca3af;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    min-height: 31px;
+
+    margin-bottom: 13px;
+}
+
+.quiz-stats {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    color: #6b7280;
+
+    font-size: 9px;
+
+    margin-bottom: 15px;
+}
+
+.start-btn {
+    width: 100%;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background: #4338ca;
+}
+
+
+/* =====================================
+   SUBJECT SELECTION
+===================================== */
+
+.subject-selection,
+.practice-section,
+.recent-results {
+    margin-bottom: 30px;
+}
+
+.subject-quiz-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.subject-quiz-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 18px 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.subject-quiz-card:hover {
+    border-color: #4f46e5;
+
+    background: #eef2ff;
+
+    transform: translateY(-2px);
+}
+
+.subject-quiz-card span {
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.subject-quiz-card strong {
+    display: block;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+.subject-quiz-card small {
+    color: #9ca3af;
+
+    font-size: 8px;
+}
+
+
+/* =====================================
+   PRACTICE GRID
+===================================== */
+
+.practice-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+.practice-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.practice-card:hover {
+    border-color: #4f46e5;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.practice-card span {
+    display: block;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.practice-card strong {
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.practice-card small {
+    color: #9ca3af;
+
+    font-size: 9px;
+}
+
+
+/* =====================================
+   RESULTS
+===================================== */
+
+.results-table {
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.result-row {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+
+    align-items: center;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    font-size: 10px;
+
+    color: #6b7280;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-header {
+    background: #f8fafc;
+
+    color: #6b7280;
+
+    font-weight: 700;
+}
+
+.result-row strong {
+    color: #374151;
+
+    font-size: 10px;
+}
+
+.score-good {
+    color: #16a34a;
+
+    font-weight: 700;
+}
+
+.score-average {
+    color: #d97706;
+
+    font-weight: 700;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+
+    .quiz-type-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-quiz-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .quiz-hero {
+        padding: 22px;
+    }
+
+    .quiz-hero-icon {
+        display: none;
+    }
+
+    .subject-quiz-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-row {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .result-row span:last-child {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-quiz-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quiz-type-card {
+        padding: 17px;
+    }
+
+}

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Attendance History | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-attendance.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>
+                SmartEdu
+            </h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            <span>
+                Students
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                Attendance
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            <span>
+                Syllabus
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            <span>
+                Resources
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            <span>
+                Quiz
+            </span>
+
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Attendance History
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a
+                href="/teacher/attendance"
+                class="history-btn"
+            >
+                + Take Attendance
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="attendance-intro">
+
+        <div>
+
+            <span class="section-label">
+                ATTENDANCE MANAGEMENT
+            </span>
+
+            <h2>
+                Attendance History
+            </h2>
+
+            <p>
+                Review previous attendance records.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FILTERS
+    ================================================= -->
+
+    <section class="history-filter">
+
+
+        <div class="form-group">
+
+            <label>
+                From Date
+            </label>
+
+            <input
+                type="date"
+                id="fromDate"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                To Date
+            </label>
+
+            <input
+                type="date"
+                id="toDate"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Subject
+            </label>
+
+            <select id="historySubject">
+
+                <option value="all">
+                    All Subjects
+                </option>
+
+                <option value="dsa">
+                    Data Structures & Algorithms
+                </option>
+
+                <option value="dbms">
+                    Database Management System
+                </option>
+
+                <option value="os">
+                    Operating Systems
+                </option>
+
+                <option value="cn">
+                    Computer Networks
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Section
+            </label>
+
+            <select id="historySection">
+
+                <option value="all">
+                    All Sections
+                </option>
+
+                <option value="A">
+                    Section A
+                </option>
+
+                <option value="B">
+                    Section B
+                </option>
+
+                <option value="C">
+                    Section C
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="filterHistory"
+            class="filter-btn"
+        >
+            Apply Filter
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SUMMARY
+    ================================================== -->
+
+    <section class="history-summary">
+
+
+        <div class="history-stat">
+
+            <span>
+                TOTAL CLASSES
+            </span>
+
+            <strong>
+                24
+            </strong>
+
+        </div>
+
+
+        <div class="history-stat">
+
+            <span>
+                TOTAL PRESENT
+            </span>
+
+            <strong class="green-text">
+                2,746
+            </strong>
+
+        </div>
+
+
+        <div class="history-stat">
+
+            <span>
+                TOTAL ABSENT
+            </span>
+
+            <strong class="red-text">
+                134
+            </strong>
+
+        </div>
+
+
+        <div class="history-stat">
+
+            <span>
+                AVERAGE ATTENDANCE
+            </span>
+
+            <strong>
+                95.3%
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         HISTORY TABLE
+    ================================================== -->
+
+    <section class="history-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    RECORDS
+                </span>
+
+                <h3>
+                    Attendance Records
+                </h3>
+
+            </div>
+
+
+            <span class="record-count">
+                6 Records
+            </span>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table id="historyTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            DATE
+                        </th>
+
+                        <th>
+                            SUBJECT
+                        </th>
+
+                        <th>
+                            SEMESTER
+                        </th>
+
+                        <th>
+                            SECTION
+                        </th>
+
+                        <th>
+                            PRESENT
+                        </th>
+
+                        <th>
+                            ABSENT
+                        </th>
+
+                        <th>
+                            ATTENDANCE
+                        </th>
+
+                        <th>
+                            ACTION
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr
+                        data-subject="dsa"
+                        data-section="A"
+                    >
+
+                        <td>
+                            29 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Data Structures
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            A
+                        </td>
+
+                        <td class="green-text">
+                            108
+                        </td>
+
+                        <td class="red-text">
+                            12
+                        </td>
+
+                        <td>
+
+                            <span class="percentage good">
+                                90%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr
+                        data-subject="dbms"
+                        data-section="A"
+                    >
+
+                        <td>
+                            28 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Database Management
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            A
+                        </td>
+
+                        <td class="green-text">
+                            112
+                        </td>
+
+                        <td class="red-text">
+                            8
+                        </td>
+
+                        <td>
+
+                            <span class="percentage excellent">
+                                93%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr
+                        data-subject="os"
+                        data-section="A"
+                    >
+
+                        <td>
+                            27 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Operating Systems
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            A
+                        </td>
+
+                        <td class="green-text">
+                            115
+                        </td>
+
+                        <td class="red-text">
+                            5
+                        </td>
+
+                        <td>
+
+                            <span class="percentage excellent">
+                                96%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr
+                        data-subject="cn"
+                        data-section="B"
+                    >
+
+                        <td>
+                            26 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Computer Networks
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            B
+                        </td>
+
+                        <td class="green-text">
+                            42
+                        </td>
+
+                        <td class="red-text">
+                            8
+                        </td>
+
+                        <td>
+
+                            <span class="percentage good">
+                                84%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr
+                        data-subject="dsa"
+                        data-section="A"
+                    >
+
+                        <td>
+                            25 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Data Structures
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            A
+                        </td>
+
+                        <td class="green-text">
+                            105
+                        </td>
+
+                        <td class="red-text">
+                            15
+                        </td>
+
+                        <td>
+
+                            <span class="percentage good">
+                                88%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr
+                        data-subject="dbms"
+                        data-section="A"
+                    >
+
+                        <td>
+                            24 Aug 2026
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                Database Management
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            A
+                        </td>
+
+                        <td class="green-text">
+                            110
+                        </td>
+
+                        <td class="red-text">
+                            10
+                        </td>
+
+                        <td>
+
+                            <span class="percentage good">
+                                92%
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="details-btn"
+                                type="button"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="/js/teacher-attendance.js"></script>
+
+</body>
+
+</html>

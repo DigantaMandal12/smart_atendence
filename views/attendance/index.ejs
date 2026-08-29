@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance | Smart Academic System</title>
+
+    <link rel="stylesheet" href="/css/attendance.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🎓
+            </div>
+
+            <div>
+                <h2>SmartEdu</h2>
+                <span>Academic System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/dashboard" class="nav-item">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="/attendance" class="nav-item active">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="/syllabus" class="nav-item">
+                <span>📚</span>
+                Syllabus
+            </a>
+
+            <a href="/resources" class="nav-item">
+                <span>📖</span>
+                Resources
+            </a>
+
+            <a href="/quiz" class="nav-item">
+                <span>📝</span>
+                Quiz
+            </a>
+
+            <a href="/profile" class="nav-item">
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="/logout" class="nav-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+                <div>
+
+                    <h1>Attendance</h1>
+
+                    <p>
+                        Mark and track your class attendance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>Student</strong>
+
+                        <small>
+                            Student ID: STU001
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= ATTENDANCE SUMMARY ================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <p>Overall Attendance</p>
+
+                    <h2>87%</h2>
+
+                    <small class="success">
+                        Good attendance
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <p>Total Present</p>
+
+                    <h2>42</h2>
+
+                    <small>
+                        Classes attended
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ❌
+                </div>
+
+                <div>
+
+                    <p>Total Absent</p>
+
+                    <h2>5</h2>
+
+                    <small>
+                        Classes missed
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <p>Total Classes</p>
+
+                    <h2>50</h2>
+
+                    <small>
+                        This semester
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ATTENDANCE AREA ================= -->
+
+        <section class="attendance-layout">
+
+
+            <!-- QR ATTENDANCE -->
+
+            <div class="attendance-card qr-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Mark Attendance</h2>
+
+                        <p>
+                            Scan the classroom QR code
+                        </p>
+
+                    </div>
+
+                    <span class="live-badge">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="qr-area">
+
+                    <div class="qr-placeholder">
+
+                        <div class="qr-corners">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="qr-icon">
+                            ▦
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Scan QR Code
+                    </h3>
+
+                    <p>
+                        Scan the QR displayed by your teacher
+                        to mark today's attendance.
+                    </p>
+
+                    <button
+                        class="scan-btn"
+                        id="scanBtn"
+                    >
+                        📷 Start QR Scanner
+                    </button>
+
+                </div>
+
+
+                <div class="security-note">
+
+                    🔒
+                    <span>
+                        Your attendance is securely recorded
+                        after verification.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TODAY'S STATUS -->
+
+            <div class="attendance-card today-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Today's Attendance</h2>
+
+                        <p>
+                            Friday, August 28, 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="today-status">
+
+                    <div class="status-icon">
+                        ✓
+                    </div>
+
+                    <h2>Attendance Marked</h2>
+
+                    <p>
+                        You are marked present for
+                        today's class.
+                    </p>
+
+                </div>
+
+
+                <div class="class-details">
+
+                    <div class="detail-row">
+
+                        <span>Subject</span>
+
+                        <strong>
+                            Database Management
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>Teacher</span>
+
+                        <strong>
+                            Prof. Roy
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>Room</span>
+
+                        <strong>
+                            Room 302
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>Time</span>
+
+                        <strong>
+                            11:00 AM - 12:00 PM
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>Marked At</span>
+
+                        <strong>
+                            11:05 AM
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUBJECT ATTENDANCE ================= -->
+
+        <section class="attendance-card subject-section">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Subject-wise Attendance</h2>
+
+                    <p>
+                        Attendance performance for each subject
+                    </p>
+
+                </div>
+
+                <a href="/attendance/history">
+                    View History →
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Subject</th>
+
+                            <th>Total Classes</th>
+
+                            <th>Present</th>
+
+                            <th>Absent</th>
+
+                            <th>Attendance</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>Data Structures</strong>
+                            </td>
+
+                            <td>12</td>
+
+                            <td>11</td>
+
+                            <td>1</td>
+
+                            <td>
+
+                                <div class="table-progress">
+
+                                    <div style="width: 92%"></div>
+
+                                </div>
+
+                                <span>92%</span>
+
+                            </td>
+
+                            <td>
+                                <span class="status good">
+                                    Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Database Management</strong>
+                            </td>
+
+                            <td>10</td>
+
+                            <td>9</td>
+
+                            <td>1</td>
+
+                            <td>
+
+                                <div class="table-progress">
+
+                                    <div style="width: 90%"></div>
+
+                                </div>
+
+                                <span>90%</span>
+
+                            </td>
+
+                            <td>
+                                <span class="status good">
+                                    Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Web Development</strong>
+                            </td>
+
+                            <td>10</td>
+
+                            <td>8</td>
+
+                            <td>2</td>
+
+                            <td>
+
+                                <div class="table-progress">
+
+                                    <div style="width: 80%"></div>
+
+                                </div>
+
+                                <span>80%</span>
+
+                            </td>
+
+                            <td>
+                                <span class="status average">
+                                    Average
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Computer Networks</strong>
+                            </td>
+
+                            <td>9</td>
+
+                            <td>7</td>
+
+                            <td>2</td>
+
+                            <td>
+
+                                <div class="table-progress">
+
+                                    <div style="width: 78%"></div>
+
+                                </div>
+
+                                <span>78%</span>
+
+                            </td>
+
+                            <td>
+                                <span class="status warning">
+                                    Low
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Operating Systems</strong>
+                            </td>
+
+                            <td>9</td>
+
+                            <td>7</td>
+
+                            <td>2</td>
+
+                            <td>
+
+                                <div class="table-progress">
+
+                                    <div style="width: 78%"></div>
+
+                                </div>
+
+                                <span>78%</span>
+
+                            </td>
+
+                            <td>
+                                <span class="status warning">
+                                    Low
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WARNING ================= -->
+
+        <section class="attendance-warning">
+
+            <div class="warning-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <strong>
+                    Attendance Warning
+                </strong>
+
+                <p>
+                    Your attendance in Computer Networks
+                    and Operating Systems is below 80%.
+                    Try to attend upcoming classes regularly.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/attendance.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Profile | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-students.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>
+                SmartEdu
+            </h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            <span>
+                Students
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                Attendance
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            <span>
+                Syllabus
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            <span>
+                Resources
+            </span>
+
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            <span>
+                Quiz
+            </span>
+
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            <span>
+                Logout
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Student Profile
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <button
+                class="notification-btn"
+                type="button"
+            >
+                🔔
+            </button>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- BACK -->
+
+    <a
+        href="/teacher/students"
+        class="back-link"
+    >
+        ← Back to Students
+    </a>
+
+
+
+    <!-- =================================================
+         STUDENT HEADER
+    ================================================== -->
+
+    <section class="student-profile-header">
+
+
+        <div class="large-student-avatar">
+            R
+        </div>
+
+
+        <div class="student-header-info">
+
+            <span class="section-label">
+                STUDENT PROFILE
+            </span>
+
+            <h2>
+                Rahul Sharma
+            </h2>
+
+            <p>
+                rahul@example.com
+            </p>
+
+            <div class="student-tags">
+
+                <span>
+                    STU001
+                </span>
+
+                <span>
+                    CSE2026001
+                </span>
+
+                <span>
+                    Semester 4
+                </span>
+
+                <span>
+                    Section A
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-status">
+
+            <span class="status active">
+                ● Active
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICS
+    ================================================== -->
+
+    <section class="profile-stats">
+
+
+        <div class="profile-stat">
+
+            <span>
+                ATTENDANCE
+            </span>
+
+            <strong>
+                92%
+            </strong>
+
+            <small>
+                Overall
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat">
+
+            <span>
+                PRESENT
+            </span>
+
+            <strong>
+                110
+            </strong>
+
+            <small>
+                Days
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat">
+
+            <span>
+                ABSENT
+            </span>
+
+            <strong>
+                10
+            </strong>
+
+            <small>
+                Days
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat">
+
+            <span>
+                QUIZ SCORE
+            </span>
+
+            <strong>
+                86%
+            </strong>
+
+            <small>
+                Average
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         INFORMATION GRID
+    ================================================== -->
+
+    <section class="profile-grid">
+
+
+        <!-- PERSONAL -->
+
+        <div class="info-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        PERSONAL
+                    </span>
+
+                    <h3>
+                        Personal Information
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-list">
+
+
+                <div class="info-row">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong>
+                        Rahul Sharma
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        rahul@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        +91 XXXXX XXXXX
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Date of Birth
+                    </span>
+
+                    <strong>
+                        15 January 2005
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Gender
+                    </span>
+
+                    <strong>
+                        Not specified
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ACADEMIC -->
+
+        <div class="info-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        ACADEMIC
+                    </span>
+
+                    <h3>
+                        Academic Information
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-list">
+
+
+                <div class="info-row">
+
+                    <span>
+                        Student ID
+                    </span>
+
+                    <strong>
+                        STU001
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Roll Number
+                    </span>
+
+                    <strong>
+                        CSE2026001
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Department
+                    </span>
+
+                    <strong>
+                        Computer Science & Engineering
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Course
+                    </span>
+
+                    <strong>
+                        B.Tech
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Semester
+                    </span>
+
+                    <strong>
+                        4
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Section
+                    </span>
+
+                    <strong>
+                        A
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ATTENDANCE
+    ================================================== -->
+
+    <section class="info-card attendance-detail-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    ATTENDANCE
+                </span>
+
+                <h3>
+                    Attendance Overview
+                </h3>
+
+            </div>
+
+
+            <a
+                href="/teacher/attendance"
+                class="view-all-link"
+            >
+                View Attendance →
+            </a>
+
+        </div>
+
+
+        <div class="attendance-overview">
+
+
+            <div class="big-attendance">
+
+                <strong>
+                    92%
+                </strong>
+
+                <span>
+                    Overall Attendance
+                </span>
+
+                <div class="large-progress">
+
+                    <div
+                        style="width:92%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="attendance-breakdown">
+
+
+                <div>
+
+                    <span>
+                        Total Classes
+                    </span>
+
+                    <strong>
+                        120
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Present
+                    </span>
+
+                    <strong>
+                        110
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Absent
+                    </span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RECENT QUIZ RESULTS
+    ================================================== -->
+
+    <section class="info-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    PERFORMANCE
+                </span>
+
+                <h3>
+                    Recent Quiz Results
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="quiz-results">
+
+
+            <div class="quiz-row">
+
+                <div>
+
+                    <strong>
+                        Data Structures
+                    </strong>
+
+                    <span>
+                        Subject Quiz
+                    </span>
+
+                </div>
+
+                <strong class="quiz-score">
+                    18/20
+                </strong>
+
+            </div>
+
+
+            <div class="quiz-row">
+
+                <div>
+
+                    <strong>
+                        Operating Systems
+                    </strong>
+
+                    <span>
+                        Subject Quiz
+                    </span>
+
+                </div>
+
+                <strong class="quiz-score">
+                    16/20
+                </strong>
+
+            </div>
+
+
+            <div class="quiz-row">
+
+                <div>
+
+                    <strong>
+                        Aptitude Test
+                    </strong>
+
+                    <span>
+                        Aptitude
+                    </span>
+
+                </div>
+
+                <strong class="quiz-score">
+                    42/50
+                </strong>
+
+            </div>
+
+
+            <div class="quiz-row">
+
+                <div>
+
+                    <strong>
+                        DSA Practice
+                    </strong>
+
+                    <span>
+                        DSA
+                    </span>
+
+                </div>
+
+                <strong class="quiz-score">
+                    24/30
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+</body>
+
+</html>

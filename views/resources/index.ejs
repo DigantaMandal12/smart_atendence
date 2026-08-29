@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resources | Smart Academic System</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/resources.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🎓
+            </div>
+
+            <div>
+                <h2>SmartEdu</h2>
+                <span>Academic System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/dashboard" class="nav-item">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="/attendance" class="nav-item">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="/syllabus" class="nav-item">
+                <span>📚</span>
+                Syllabus
+            </a>
+
+            <a href="/resources" class="nav-item active">
+                <span>📖</span>
+                Resources
+            </a>
+
+            <a href="/quiz" class="nav-item">
+                <span>📝</span>
+                Quiz
+            </a>
+
+            <a href="/profile" class="nav-item">
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="/logout" class="nav-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+                <div>
+
+                    <h1>Learning Resources</h1>
+
+                    <p>
+                        Discover courses and learning materials
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>Student</strong>
+
+                        <small>
+                            Student ID: STU001
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="resource-hero">
+
+            <div>
+
+                <span class="hero-label">
+                    LEARN • PRACTICE • GROW
+                </span>
+
+                <h2>
+                    Improve your skills with
+                    <span>quality courses.</span>
+                </h2>
+
+                <p>
+                    Access free courses or explore premium
+                    courses to build skills beyond your syllabus.
+                </p>
+
+            </div>
+
+
+            <div class="hero-icon">
+                📖
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="resource-controls">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search courses..."
+                >
+
+            </div>
+
+
+            <div class="resource-filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="free"
+                >
+                    🆓 Free
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="paid"
+                >
+                    💎 Paid
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORY ================= -->
+
+        <section class="category-section">
+
+            <div class="category-header">
+
+                <div>
+
+                    <h2>
+                        Browse by Category
+                    </h2>
+
+                    <p>
+                        Find resources based on your interests
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-list">
+
+                <button class="category-btn active">
+                    All
+                </button>
+
+                <button class="category-btn">
+                    💻 Programming
+                </button>
+
+                <button class="category-btn">
+                    🌐 Web Development
+                </button>
+
+                <button class="category-btn">
+                    🗄️ Database
+                </button>
+
+                <button class="category-btn">
+                    🤖 AI & ML
+                </button>
+
+                <button class="category-btn">
+                    🔐 Cyber Security
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COURSES ================= -->
+
+        <section class="courses-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Recommended Courses
+                    </h2>
+
+                    <p>
+                        Courses selected for your academic journey
+                    </p>
+
+                </div>
+
+                <span id="courseCount">
+                    6 Courses
+                </span>
+
+            </div>
+
+
+            <div class="course-grid" id="courseGrid">
+
+
+                <!-- ================= COURSE 1 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="free"
+                    data-category="programming"
+                    data-title="JavaScript Fundamentals"
+                >
+
+                    <div class="course-image javascript">
+
+                        <span class="course-icon">
+                            JS
+                        </span>
+
+                        <span class="course-type free-badge">
+                            FREE
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            Programming
+                        </div>
+
+                        <h3>
+                            JavaScript Fundamentals
+                        </h3>
+
+                        <p>
+                            Learn variables, functions, arrays,
+                            objects and modern JavaScript.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 24 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 8 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.8
+                            </div>
+
+                            <strong class="free-price">
+                                FREE
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn">
+                            Start Learning →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COURSE 2 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="paid"
+                    data-category="web"
+                    data-title="Full Stack Web Development"
+                >
+
+                    <div class="course-image web">
+
+                        <span class="course-icon">
+                            WEB
+                        </span>
+
+                        <span class="course-type paid-badge">
+                            PREMIUM
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            Web Development
+                        </div>
+
+                        <h3>
+                            Full Stack Web Development
+                        </h3>
+
+                        <p>
+                            Build complete applications using
+                            HTML, CSS, JavaScript, Node.js and MongoDB.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 52 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 32 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.9
+                            </div>
+
+                            <strong class="paid-price">
+                                ₹999
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn paid-course">
+                            View Course →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COURSE 3 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="free"
+                    data-category="database"
+                    data-title="MongoDB for Beginners"
+                >
+
+                    <div class="course-image database">
+
+                        <span class="course-icon">
+                            DB
+                        </span>
+
+                        <span class="course-type free-badge">
+                            FREE
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            Database
+                        </div>
+
+                        <h3>
+                            MongoDB for Beginners
+                        </h3>
+
+                        <p>
+                            Learn MongoDB databases, collections,
+                            documents, queries and CRUD operations.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 18 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 6 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.7
+                            </div>
+
+                            <strong class="free-price">
+                                FREE
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn">
+                            Start Learning →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COURSE 4 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="paid"
+                    data-category="ai"
+                    data-title="Artificial Intelligence Bootcamp"
+                >
+
+                    <div class="course-image ai">
+
+                        <span class="course-icon">
+                            AI
+                        </span>
+
+                        <span class="course-type paid-badge">
+                            PREMIUM
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            AI & ML
+                        </div>
+
+                        <h3>
+                            Artificial Intelligence Bootcamp
+                        </h3>
+
+                        <p>
+                            Learn machine learning fundamentals,
+                            Python, models and AI applications.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 65 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 40 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.9
+                            </div>
+
+                            <strong class="paid-price">
+                                ₹1,499
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn paid-course">
+                            View Course →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COURSE 5 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="free"
+                    data-category="cyber"
+                    data-title="Cyber Security Basics"
+                >
+
+                    <div class="course-image cyber">
+
+                        <span class="course-icon">
+                            🔐
+                        </span>
+
+                        <span class="course-type free-badge">
+                            FREE
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            Cyber Security
+                        </div>
+
+                        <h3>
+                            Cyber Security Basics
+                        </h3>
+
+                        <p>
+                            Understand common security threats,
+                            authentication and safe computing.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 20 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 7 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.6
+                            </div>
+
+                            <strong class="free-price">
+                                FREE
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn">
+                            Start Learning →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COURSE 6 ================= -->
+
+                <article
+                    class="course-card"
+                    data-type="paid"
+                    data-category="programming"
+                    data-title="Data Structures and Algorithms"
+                >
+
+                    <div class="course-image dsa">
+
+                        <span class="course-icon">
+                            DSA
+                        </span>
+
+                        <span class="course-type paid-badge">
+                            PREMIUM
+                        </span>
+
+                    </div>
+
+
+                    <div class="course-body">
+
+                        <div class="course-category">
+                            Programming
+                        </div>
+
+                        <h3>
+                            Data Structures & Algorithms
+                        </h3>
+
+                        <p>
+                            Master arrays, linked lists, trees,
+                            graphs, sorting and problem solving.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                🎥 48 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 28 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-footer">
+
+                            <div class="rating">
+                                ⭐ 4.9
+                            </div>
+
+                            <strong class="paid-price">
+                                ₹799
+                            </strong>
+
+                        </div>
+
+
+                        <button class="course-btn paid-course">
+                            View Course →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- NO RESULT -->
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <div>
+                    🔍
+                </div>
+
+                <h3>
+                    No courses found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOTTOM INFO ================= -->
+
+        <section class="resource-info">
+
+            <div class="info-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Keep Learning Beyond Your Syllabus
+                </h3>
+
+                <p>
+                    Free courses help you explore new skills,
+                    while premium courses provide deeper,
+                    structured learning experiences.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/resources.js"></script>
+
+</body>
+
+</html>

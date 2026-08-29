@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Signup | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/signup.css"
+    >
+
+</head>
+
+<body>
+
+
+    <div class="signup-container">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="signup-info">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h2>SmartEdu</h2>
+                    <span>Smart Academic System</span>
+                </div>
+
+            </div>
+
+
+            <div class="info-content">
+
+                <span class="small-title">
+                    STUDENT PORTAL
+                </span>
+
+                <h1>
+                    Start your
+                    <span>academic journey.</span>
+                </h1>
+
+                <p>
+                    Create your student account and manage
+                    attendance, syllabus, resources and quizzes
+                    from one place.
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <div>
+                            <strong>
+                                Track Your Progress
+                            </strong>
+
+                            <small>
+                                Monitor attendance and syllabus
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📚
+                        </div>
+
+                        <div>
+                            <strong>
+                                Access Resources
+                            </strong>
+
+                            <small>
+                                Learn with useful academic resources
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📝
+                        </div>
+
+                        <div>
+                            <strong>
+                                Practice & Improve
+                            </strong>
+
+                            <small>
+                                Take quizzes and test your knowledge
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+                © 2026 SmartEdu
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="signup-form-container">
+
+
+            <div class="form-wrapper">
+
+
+                <!-- HEADER -->
+
+                <div class="form-header">
+
+                    <span class="form-label">
+                        CREATE ACCOUNT
+                    </span>
+
+                    <h2>
+                        Student Registration
+                    </h2>
+
+                    <p>
+                        Enter your information to create
+                        your student account.
+                    </p>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress-container">
+
+                    <div class="progress-step active">
+
+                        <span>
+                            1
+                        </span>
+
+                        <small>
+                            Personal
+                        </small>
+
+                    </div>
+
+
+                    <div class="progress-line"></div>
+
+
+                    <div class="progress-step active">
+
+                        <span>
+                            2
+                        </span>
+
+                        <small>
+                            Academic
+                        </small>
+
+                    </div>
+
+
+                    <div class="progress-line"></div>
+
+
+                    <div class="progress-step">
+
+                        <span>
+                            3
+                        </span>
+
+                        <small>
+                            Create
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form action="/signup/student" method="POST" id="studentSignupForm" >
+
+
+                    <!-- ================================= -->
+                    <!-- PERSONAL INFORMATION -->
+                    <!-- ================================= -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Personal Information
+                                </h3>
+
+                                <p>
+                                    Basic information about you
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="password">
+                                    Password
+                                    <span>*</span>
+                                </label>
+
+                                <div class="password-box">
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Create password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="password"
+                                    >
+                                        👁
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="form-group">
+
+                                <label for="confirmPassword">
+                                    Confirm Password
+                                    <span>*</span>
+                                </label>
+
+                                <div class="password-box">
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Confirm password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirmPassword"
+                                    >
+                                        👁
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================= -->
+                    <!-- ACADEMIC INFORMATION -->
+                    <!-- ================================= -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Academic Information
+                                </h3>
+
+                                <p>
+                                    Information about your studies
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STUDENT ID -->
+
+                        <div class="form-group">
+
+                            <label for="studentId">
+                                Student ID
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                name="studentId"
+                                placeholder="Enter your student ID"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ROLL NUMBER -->
+
+                        <div class="form-group">
+
+                            <label for="rollNumber">
+                                Roll Number
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rollNumber"
+                                name="rollNumber"
+                                placeholder="Enter your roll number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DEPARTMENT -->
+
+                        <div class="form-group">
+
+                            <label for="department">
+                                Department
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="department"
+                                name="department"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="Computer Science and Engineering">
+                                    Computer Science & Engineering
+                                </option>
+
+                                <option value="Information Technology">
+                                    Information Technology
+                                </option>
+
+                                <option value="Electronics and Communication">
+                                    Electronics & Communication
+                                </option>
+
+                                <option value="Electrical Engineering">
+                                    Electrical Engineering
+                                </option>
+
+                                <option value="Mechanical Engineering">
+                                    Mechanical Engineering
+                                </option>
+
+                                <option value="Civil Engineering">
+                                    Civil Engineering
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- COURSE -->
+
+                        <div class="form-group">
+
+                            <label for="course">
+                                Course
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="course"
+                                name="course"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Course
+                                </option>
+
+                                <option value="B.Tech">
+                                    B.Tech
+                                </option>
+
+                                <option value="M.Tech">
+                                    M.Tech
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MCA">
+                                    MCA
+                                </option>
+
+                                <option value="B.Sc">
+                                    B.Sc
+                                </option>
+
+                                <option value="M.Sc">
+                                    M.Sc
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SEMESTER -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="semester">
+                                    Semester
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="semester"
+                                    name="semester"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Semester
+                                    </option>
+
+                                    <option value="1">
+                                        Semester 1
+                                    </option>
+
+                                    <option value="2">
+                                        Semester 2
+                                    </option>
+
+                                    <option value="3">
+                                        Semester 3
+                                    </option>
+
+                                    <option value="4">
+                                        Semester 4
+                                    </option>
+
+                                    <option value="5">
+                                        Semester 5
+                                    </option>
+
+                                    <option value="6">
+                                        Semester 6
+                                    </option>
+
+                                    <option value="7">
+                                        Semester 7
+                                    </option>
+
+                                    <option value="8">
+                                        Semester 8
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- SECTION -->
+
+                            <div class="form-group">
+
+                                <label for="section">
+                                    Section
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="section"
+                                    name="section"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Section
+                                    </option>
+
+                                    <option value="A">
+                                        Section A
+                                    </option>
+
+                                    <option value="B">
+                                        Section B
+                                    </option>
+
+                                    <option value="C">
+                                        Section C
+                                    </option>
+
+                                    <option value="D">
+                                        Section D
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================= -->
+                    <!-- SUBMIT -->
+                    <!-- ================================= -->
+
+                    <div class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+
+                            I agree to the
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="create-account-btn"
+                    >
+
+                        Create Student Account
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="/login">
+                        Login
+                    </a>
+
+                </div>
+
+
+                <!-- TEACHER LINK -->
+
+                <div class="other-signup">
+
+                    Are you a teacher?
+
+                    <a href="/signup/teacher">
+                        Register as Teacher
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher Signup | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/signup.css"
+    >
+
+</head>
+
+<body>
+
+
+    <div class="signup-container">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="signup-info teacher-info">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h2>
+                        SmartEdu
+                    </h2>
+
+                    <span>
+                        Smart Academic System
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-content">
+
+                <span class="small-title">
+                    TEACHER PORTAL
+                </span>
+
+                <h1>
+
+                    Empower your
+                    <span>students.</span>
+
+                </h1>
+
+                <p>
+
+                    Create your teacher account to manage
+                    students, attendance, syllabus, resources
+                    and quizzes.
+
+                </p>
+
+
+                <div class="features">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            👨‍🎓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manage Students
+                            </strong>
+
+                            <small>
+                                View and manage student information
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Track Attendance
+                            </strong>
+
+                            <small>
+                                Record and monitor attendance
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📚
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manage Learning
+                            </strong>
+
+                            <small>
+                                Manage syllabus, resources and quizzes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 SmartEdu
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="signup-form-container">
+
+
+            <div class="form-wrapper">
+
+
+                <!-- HEADER -->
+
+                <div class="form-header">
+
+                    <span class="form-label">
+                        CREATE ACCOUNT
+                    </span>
+
+                    <h2>
+                        Teacher Registration
+                    </h2>
+
+                    <p>
+                        Enter your professional information
+                        to create your teacher account.
+                    </p>
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- PERSONAL INFORMATION -->
+                <!-- ================================= -->
+
+                <div class="form-section">
+
+
+                    <div class="section-title">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Personal Information
+                            </h3>
+
+                            <p>
+                                Basic information about you
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        action="/signup/teacher"
+                        method="POST"
+                        id="teacherSignupForm"
+                    >
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="teacherName">
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="teacherName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- OFFICIAL EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="teacherEmail">
+                                Official Email
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="teacherEmail"
+                                name="email"
+                                placeholder="Enter your official email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="teacherPhone">
+                                Phone Number
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="teacherPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- PROFESSIONAL INFORMATION -->
+                        <!-- ================================= -->
+
+                        <div class="section-title professional-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Professional Information
+                                </h3>
+
+                                <p>
+                                    Information about your role
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMPLOYEE ID -->
+
+                        <div class="form-group">
+
+                            <label for="employeeId">
+                                Employee ID
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="employeeId"
+                                name="employeeId"
+                                placeholder="Enter your employee ID"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DEPARTMENT -->
+
+                        <div class="form-group">
+
+                            <label for="teacherDepartment">
+                                Department
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="teacherDepartment"
+                                name="department"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="Computer Science and Engineering">
+                                    Computer Science & Engineering
+                                </option>
+
+                                <option value="Information Technology">
+                                    Information Technology
+                                </option>
+
+                                <option value="Electronics and Communication">
+                                    Electronics & Communication
+                                </option>
+
+                                <option value="Electrical Engineering">
+                                    Electrical Engineering
+                                </option>
+
+                                <option value="Mechanical Engineering">
+                                    Mechanical Engineering
+                                </option>
+
+                                <option value="Civil Engineering">
+                                    Civil Engineering
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- DESIGNATION -->
+
+                        <div class="form-group">
+
+                            <label for="designation">
+                                Designation
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="designation"
+                                name="designation"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Designation
+                                </option>
+
+                                <option value="Assistant Professor">
+                                    Assistant Professor
+                                </option>
+
+                                <option value="Associate Professor">
+                                    Associate Professor
+                                </option>
+
+                                <option value="Professor">
+                                    Professor
+                                </option>
+
+                                <option value="Lecturer">
+                                    Lecturer
+                                </option>
+
+                                <option value="Head of Department">
+                                    Head of Department
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- PASSWORD -->
+                        <!-- ================================= -->
+
+                        <div class="section-title professional-title">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Account Security
+                                </h3>
+
+                                <p>
+                                    Create a secure password
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="teacherPassword">
+                                Password
+                                <span>*</span>
+                            </label>
+
+                            <div class="password-box">
+
+                                <input
+                                    type="password"
+                                    id="teacherPassword"
+                                    name="password"
+                                    placeholder="Create a password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="teacherPassword"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONFIRM -->
+
+                        <div class="form-group">
+
+                            <label for="teacherConfirmPassword">
+                                Confirm Password
+                                <span>*</span>
+                            </label>
+
+                            <div class="password-box">
+
+                                <input
+                                    type="password"
+                                    id="teacherConfirmPassword"
+                                    name="confirmPassword"
+                                    placeholder="Confirm your password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="teacherConfirmPassword"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+
+                        <div class="terms">
+
+                            <input
+                                type="checkbox"
+                                id="teacherTerms"
+                                required
+                            >
+
+                            <label for="teacherTerms">
+
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CREATE ACCOUNT -->
+
+                        <button
+                            type="submit"
+                            class="create-account-btn"
+                        >
+
+                            Create Teacher Account
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="/login">
+                        Login
+                    </a>
+
+                </div>
+
+
+                <!-- STUDENT LINK -->
+
+                <div class="other-signup">
+
+                    Are you a student?
+
+                    <a href="/signup/student">
+                        Register as Student
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/auth.js"></script>
+
+</body>
+
+</html>

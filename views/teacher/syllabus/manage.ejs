@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manage Syllabus | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-syllabus.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+            <span class="nav-icon">📊</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+            <span class="nav-icon">👨‍🎓</span>
+            <span>Students</span>
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+            <span class="nav-icon">📅</span>
+            <span>Attendance</span>
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item active"
+        >
+            <span class="nav-icon">📚</span>
+            <span>Syllabus</span>
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+            <span class="nav-icon">📖</span>
+            <span>Resources</span>
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+            <span class="nav-icon">📝</span>
+            <span>Quiz</span>
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+            <span class="nav-icon">👤</span>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+            <span>🚪</span>
+            <span>Logout</span>
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Manage Syllabus
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a
+                href="/teacher/syllabus"
+                class="back-btn"
+            >
+                ← View Syllabus
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTROLS
+    ===================================================== -->
+
+    <section class="manage-controls">
+
+        <div class="form-group">
+
+            <label>
+                Semester
+            </label>
+
+            <select>
+
+                <option>
+                    Semester 4
+                </option>
+
+                <option>
+                    Semester 3
+                </option>
+
+                <option>
+                    Semester 5
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Subject
+            </label>
+
+            <select>
+
+                <option>
+                    Data Structures & Algorithms
+                </option>
+
+                <option>
+                    Database Management System
+                </option>
+
+                <option>
+                    Operating Systems
+                </option>
+
+                <option>
+                    Computer Networks
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            onclick="openTopicForm()"
+        >
+            + Add Topic
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ADD TOPIC FORM
+    ===================================================== -->
+
+    <section
+        id="topicForm"
+        class="topic-form"
+        style="display:none;"
+    >
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    NEW TOPIC
+                </span>
+
+                <h3>
+                    Add Syllabus Topic
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    Unit Number
+                </label>
+
+                <input
+                    type="number"
+                    placeholder="Example: 5"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Topic Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter topic name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Status
+                </label>
+
+                <select>
+
+                    <option>
+                        Pending
+                    </option>
+
+                    <option>
+                        In Progress
+                    </option>
+
+                    <option>
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="cancel-btn"
+                onclick="closeTopicForm()"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="save-btn"
+                onclick="saveTopic()"
+            >
+                Save Topic
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UNITS
+    ===================================================== -->
+
+    <section class="units-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-label">
+                    DATA STRUCTURES & ALGORITHMS
+                </span>
+
+                <h3>
+                    Syllabus Topics
+                </h3>
+
+            </div>
+
+
+            <span class="progress-badge">
+                80% Complete
+            </span>
+
+        </div>
+
+
+
+        <!-- UNIT 1 -->
+
+        <div class="unit">
+
+
+            <div class="unit-header">
+
+                <div>
+
+                    <span>
+                        UNIT 01
+                    </span>
+
+                    <h3>
+                        Introduction to Data Structures
+                    </h3>
+
+                </div>
+
+
+                <span class="unit-progress">
+                    100%
+                </span>
+
+            </div>
+
+
+            <div class="topic-management">
+
+
+                <div class="manage-topic completed">
+
+                    <div class="topic-check">
+                        ✓
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            Arrays
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+                <div class="manage-topic completed">
+
+                    <div class="topic-check">
+                        ✓
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            Linked Lists
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- UNIT 2 -->
+
+        <div class="unit">
+
+
+            <div class="unit-header">
+
+                <div>
+
+                    <span>
+                        UNIT 02
+                    </span>
+
+                    <h3>
+                        Trees
+                    </h3>
+
+                </div>
+
+
+                <span class="unit-progress">
+                    75%
+                </span>
+
+            </div>
+
+
+            <div class="topic-management">
+
+
+                <div class="manage-topic completed">
+
+                    <div class="topic-check">
+                        ✓
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            Binary Trees
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+                <div class="manage-topic completed">
+
+                    <div class="topic-check">
+                        ✓
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            Binary Search Trees
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+                <div class="manage-topic in-progress">
+
+                    <div class="topic-check">
+                        ●
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            AVL Trees
+                        </strong>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+                <div class="manage-topic pending">
+
+                    <div class="topic-check">
+                        ○
+                    </div>
+
+                    <div class="manage-topic-info">
+
+                        <strong>
+                            Red Black Trees
+                        </strong>
+
+                        <span>
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="edit-topic"
+                    >
+                        ✏
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-topic"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+</main>
+
+
+<script>
+
+function openTopicForm() {
+
+    document.getElementById(
+        "topicForm"
+    ).style.display = "block";
+
+}
+
+
+function closeTopicForm() {
+
+    document.getElementById(
+        "topicForm"
+    ).style.display = "none";
+
+}
+
+
+function saveTopic() {
+
+    alert(
+        "Topic saved successfully! MongoDB integration will be added later."
+    );
+
+    closeTopicForm();
+
+}
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Quiz Questions | Teacher | SmartEdu
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-quiz.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           QUESTION PAGE
+        ===================================================== */
+
+        .question-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           QUIZ INFORMATION
+        ===================================================== */
+
+        .quiz-info-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 22px 25px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,.04);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .quiz-info-left {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .quiz-main-icon {
+            width: 50px;
+            height: 50px;
+
+            border-radius: 12px;
+
+            background: #eef2ff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+        .quiz-info-left span {
+            color: #6366f1;
+
+            font-size: 8px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .quiz-info-left h2 {
+            font-size: 17px;
+
+            margin-top: 5px;
+        }
+
+        .quiz-info-left p {
+            color: #8994a7;
+
+            font-size: 8px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           QUIZ STATISTICS
+        ===================================================== */
+
+        .quiz-stat-box {
+            display: flex;
+
+            gap: 25px;
+        }
+
+        .quiz-stat {
+            text-align: center;
+        }
+
+        .quiz-stat strong {
+            display: block;
+
+            color: #4f46e5;
+
+            font-size: 20px;
+        }
+
+        .quiz-stat span {
+            display: block;
+
+            color: #8994a7;
+
+            font-size: 7px;
+
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           ADD QUESTION CARD
+        ===================================================== */
+
+        .add-question-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,.04);
+        }
+
+        .question-heading {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding-bottom: 17px;
+
+            margin-bottom: 20px;
+
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .question-heading span {
+            color: #6366f1;
+
+            font-size: 8px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .question-heading h2 {
+            font-size: 16px;
+
+            margin-top: 6px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .question-form-group {
+            margin-bottom: 17px;
+        }
+
+        .question-form-group label {
+            display: block;
+
+            color: #354052;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+        }
+
+        .question-form-group textarea,
+        .question-form-group input,
+        .question-form-group select {
+
+            width: 100%;
+
+            border: 1px solid #dfe3eb;
+
+            border-radius: 8px;
+
+            padding: 11px;
+
+            outline: none;
+
+            background: white;
+
+            color: #374151;
+
+            font-size: 10px;
+
+        }
+
+        .question-form-group textarea {
+            min-height: 90px;
+
+            resize: vertical;
+        }
+
+        .question-form-group input,
+        .question-form-group select {
+            height: 40px;
+        }
+
+        .question-form-group textarea:focus,
+        .question-form-group input:focus,
+        .question-form-group select:focus {
+
+            border-color: #6366f1;
+
+            box-shadow:
+                0 0 0 3px rgba(99,102,241,.08);
+
+        }
+
+
+        /* =====================================================
+           OPTIONS
+        ===================================================== */
+
+        .options-title {
+            font-size: 11px;
+
+            margin-bottom: 12px;
+        }
+
+        .options-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .option-box {
+            position: relative;
+        }
+
+        .option-label {
+            position: absolute;
+
+            left: 11px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 24px;
+            height: 24px;
+
+            border-radius: 6px;
+
+            background: #eef2ff;
+
+            color: #4f46e5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 8px;
+
+            font-weight: bold;
+
+            z-index: 2;
+        }
+
+        .option-box input {
+            padding-left: 47px !important;
+        }
+
+
+        /* =====================================================
+           CORRECT ANSWER
+        ===================================================== */
+
+        .answer-section {
+            display: grid;
+
+            grid-template-columns: 1fr 150px;
+
+            gap: 15px;
+
+            margin-top: 20px;
+        }
+
+
+        /* =====================================================
+           FORM BUTTONS
+        ===================================================== */
+
+        .question-actions {
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 10px;
+
+            margin-top: 22px;
+
+            padding-top: 18px;
+
+            border-top: 1px solid #edf0f4;
+        }
+
+        .reset-btn {
+            height: 40px;
+
+            padding: 0 17px;
+
+            border: 1px solid #dfe3eb;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: #596579;
+
+            font-size: 9px;
+
+            cursor: pointer;
+        }
+
+        .reset-btn:hover {
+            background: #f8f9fc;
+        }
+
+        .add-question-btn {
+            height: 40px;
+
+            padding: 0 20px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #4f46e5;
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .add-question-btn:hover {
+            background: #4338ca;
+        }
+
+
+        /* =====================================================
+           QUESTIONS LIST
+        ===================================================== */
+
+        .questions-list-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,.04);
+        }
+
+        .questions-list-header {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 18px;
+        }
+
+        .questions-list-header span {
+            color: #6366f1;
+
+            font-size: 8px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .questions-list-header h2 {
+            font-size: 16px;
+
+            margin-top: 6px;
+        }
+
+        .question-count {
+            color: #8994a7;
+
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           QUESTION ITEM
+        ===================================================== */
+
+        .question-item {
+            border: 1px solid #edf0f4;
+
+            border-radius: 11px;
+
+            padding: 18px;
+
+            margin-bottom: 12px;
+
+            transition: .2s;
+        }
+
+        .question-item:hover {
+            border-color: #d9dcff;
+        }
+
+        .question-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .question-top {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+        }
+
+        .question-number {
+            width: 28px;
+            height: 28px;
+
+            border-radius: 8px;
+
+            background: #eef2ff;
+
+            color: #4f46e5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            flex-shrink: 0;
+        }
+
+        .question-content {
+            flex: 1;
+        }
+
+        .question-content h3 {
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+        .question-content p {
+            color: #8994a7;
+
+            font-size: 8px;
+
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           QUESTION OPTIONS
+        ===================================================== */
+
+        .saved-options {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 8px;
+
+            margin-top: 14px;
+
+            margin-left: 40px;
+        }
+
+        .saved-option {
+            padding: 9px 11px;
+
+            border-radius: 7px;
+
+            background: #f8f9fc;
+
+            color: #697386;
+
+            font-size: 8px;
+        }
+
+        .saved-option.correct {
+            background: #ecfdf5;
+
+            color: #059669;
+
+            font-weight: bold;
+
+            border: 1px solid #bbf7d0;
+        }
+
+
+        /* =====================================================
+           QUESTION FOOTER
+        ===================================================== */
+
+        .question-footer {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-top: 14px;
+
+            margin-left: 40px;
+        }
+
+        .question-marks {
+            color: #8994a7;
+
+            font-size: 8px;
+        }
+
+        .question-marks strong {
+            color: #4f46e5;
+        }
+
+        .saved-actions {
+            display: flex;
+
+            gap: 6px;
+        }
+
+        .saved-actions button {
+            width: 30px;
+            height: 30px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background: #f7f8fb;
+
+            cursor: pointer;
+
+            font-size: 10px;
+        }
+
+        .saved-actions button:hover {
+            background: #eef2ff;
+        }
+
+
+        /* =====================================================
+           PUBLISH
+        ===================================================== */
+
+        .publish-section {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: #f5f5ff;
+
+            border: 1px solid #e0e0ff;
+
+            border-radius: 12px;
+
+            padding: 18px;
+
+            margin-top: 20px;
+        }
+
+        .publish-info strong {
+            display: block;
+
+            font-size: 11px;
+        }
+
+        .publish-info span {
+            display: block;
+
+            color: #8994a7;
+
+            font-size: 8px;
+
+            margin-top: 5px;
+        }
+
+        .publish-btn {
+            height: 40px;
+
+            padding: 0 20px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #4f46e5;
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .publish-btn:hover {
+            background: #4338ca;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .quiz-info-card {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .quiz-stat-box {
+                width: 100%;
+
+                justify-content: space-around;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .answer-section {
+                grid-template-columns: 1fr;
+            }
+
+            .saved-options {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .quiz-info-card,
+            .add-question-card,
+            .questions-list-card {
+                padding: 18px;
+            }
+
+            .question-actions {
+                flex-direction: column;
+            }
+
+            .reset-btn,
+            .add-question-btn {
+                width: 100%;
+            }
+
+            .publish-section {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+            }
+
+            .publish-btn {
+                width: 100%;
+            }
+
+            .saved-options,
+            .question-footer {
+                margin-left: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>
+                SmartEdu
+            </h2>
+
+            <span>
+                Teacher Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TEACHER -->
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>
+                Teacher Name
+            </strong>
+
+            <span>
+                ID: EMP001
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            Dashboard
+
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🎓
+            </span>
+
+            Students
+
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            Attendance
+
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📚
+            </span>
+
+            Syllabus
+
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📖
+            </span>
+
+            Resources
+
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📝
+            </span>
+
+            Quiz
+
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            Profile
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+
+            <span>
+                🚪
+            </span>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Quiz Questions
+            </h1>
+
+        </div>
+
+
+        <a
+            href="/teacher/quiz"
+            class="back-btn"
+        >
+            ← Back to Quizzes
+        </a>
+
+    </header>
+
+
+
+    <div class="question-container">
+
+
+        <!-- =================================================
+             QUIZ INFORMATION
+        ================================================= -->
+
+        <section class="quiz-info-card">
+
+
+            <div class="quiz-info-left">
+
+
+                <div class="quiz-main-icon">
+                    📚
+                </div>
+
+
+                <div>
+
+                    <span>
+                        SUBJECT WISE QUIZ
+                    </span>
+
+                    <h2>
+                        Data Structures - Unit 1
+                    </h2>
+
+                    <p>
+                        Semester 4 • Medium • 30 Minutes
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="quiz-stat-box">
+
+
+                <div class="quiz-stat">
+
+                    <strong>
+                        8
+                    </strong>
+
+                    <span>
+                        Questions
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-stat">
+
+                    <strong>
+                        8
+                    </strong>
+
+                    <span>
+                        Marks
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-stat">
+
+                    <strong>
+                        30
+                    </strong>
+
+                    <span>
+                        Minutes
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADD QUESTION
+        ================================================= -->
+
+        <section class="add-question-card">
+
+
+            <div class="question-heading">
+
+
+                <div>
+
+                    <span>
+                        QUESTION BUILDER
+                    </span>
+
+                    <h2>
+                        Add New Question
+                    </h2>
+
+                </div>
+
+
+                <span>
+                    MCQ
+                </span>
+
+
+            </div>
+
+
+
+            <form
+                action="/teacher/quiz/1/questions"
+                method="POST"
+            >
+
+
+                <!-- QUESTION -->
+
+                <div class="question-form-group">
+
+                    <label>
+                        Question *
+                    </label>
+
+                    <textarea
+                        name="question"
+                        placeholder="Write your question here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- OPTIONS -->
+
+                <h3 class="options-title">
+                    Answer Options
+                </h3>
+
+
+                <div class="options-grid">
+
+
+                    <!-- A -->
+
+                    <div class="option-box">
+
+                        <span class="option-label">
+                            A
+                        </span>
+
+                        <input
+                            type="text"
+                            name="optionA"
+                            placeholder="Option A"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- B -->
+
+                    <div class="option-box">
+
+                        <span class="option-label">
+                            B
+                        </span>
+
+                        <input
+                            type="text"
+                            name="optionB"
+                            placeholder="Option B"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- C -->
+
+                    <div class="option-box">
+
+                        <span class="option-label">
+                            C
+                        </span>
+
+                        <input
+                            type="text"
+                            name="optionC"
+                            placeholder="Option C"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- D -->
+
+                    <div class="option-box">
+
+                        <span class="option-label">
+                            D
+                        </span>
+
+                        <input
+                            type="text"
+                            name="optionD"
+                            placeholder="Option D"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ANSWER + MARKS -->
+
+                <div class="answer-section">
+
+
+                    <div class="question-form-group">
+
+                        <label>
+                            Correct Answer *
+                        </label>
+
+                        <select
+                            name="correctAnswer"
+                            required
+                        >
+
+                            <option value="">
+                                Select Correct Answer
+                            </option>
+
+                            <option value="A">
+                                Option A
+                            </option>
+
+                            <option value="B">
+                                Option B
+                            </option>
+
+                            <option value="C">
+                                Option C
+                            </option>
+
+                            <option value="D">
+                                Option D
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="question-form-group">
+
+                        <label>
+                            Marks
+                        </label>
+
+                        <input
+                            type="number"
+                            name="marks"
+                            value="1"
+                            min="1"
+                            max="100"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="question-actions">
+
+
+                    <button
+                        type="reset"
+                        class="reset-btn"
+                    >
+                        Clear
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="add-question-btn"
+                    >
+                        + Add Question
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUESTIONS LIST
+        ================================================= -->
+
+        <section class="questions-list-card">
+
+
+            <div class="questions-list-header">
+
+
+                <div>
+
+                    <span>
+                        QUIZ QUESTIONS
+                    </span>
+
+                    <h2>
+                        Added Questions
+                    </h2>
+
+                </div>
+
+
+                <span class="question-count">
+                    8 Questions • 8 Marks
+                </span>
+
+
+            </div>
+
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="question-item">
+
+
+                <div class="question-top">
+
+
+                    <div class="question-number">
+                        01
+                    </div>
+
+
+                    <div class="question-content">
+
+                        <h3>
+                            Which data structure follows the
+                            LIFO principle?
+                        </h3>
+
+                        <p>
+                            Data Structures
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="saved-options">
+
+                    <div class="saved-option correct">
+                        A. Stack ✓
+                    </div>
+
+                    <div class="saved-option">
+                        B. Queue
+                    </div>
+
+                    <div class="saved-option">
+                        C. Linked List
+                    </div>
+
+                    <div class="saved-option">
+                        D. Array
+                    </div>
+
+                </div>
+
+
+
+                <div class="question-footer">
+
+                    <span class="question-marks">
+                        Marks:
+                        <strong>
+                            1
+                        </strong>
+                    </span>
+
+
+                    <div class="saved-actions">
+
+                        <button
+                            type="button"
+                            title="Edit"
+                        >
+                            ✏️
+                        </button>
+
+                        <button
+                            type="button"
+                            title="Delete"
+                        >
+                            🗑️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="question-item">
+
+
+                <div class="question-top">
+
+
+                    <div class="question-number">
+                        02
+                    </div>
+
+
+                    <div class="question-content">
+
+                        <h3>
+                            What is the time complexity of
+                            binary search?
+                        </h3>
+
+                        <p>
+                            Algorithms
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="saved-options">
+
+                    <div class="saved-option">
+                        A. O(n)
+                    </div>
+
+                    <div class="saved-option correct">
+                        B. O(log n) ✓
+                    </div>
+
+                    <div class="saved-option">
+                        C. O(n²)
+                    </div>
+
+                    <div class="saved-option">
+                        D. O(1)
+                    </div>
+
+                </div>
+
+
+
+                <div class="question-footer">
+
+                    <span class="question-marks">
+                        Marks:
+                        <strong>
+                            1
+                        </strong>
+                    </span>
+
+
+                    <div class="saved-actions">
+
+                        <button
+                            type="button"
+                        >
+                            ✏️
+                        </button>
+
+                        <button
+                            type="button"
+                        >
+                            🗑️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="question-item">
+
+
+                <div class="question-top">
+
+
+                    <div class="question-number">
+                        03
+                    </div>
+
+
+                    <div class="question-content">
+
+                        <h3>
+                            Which data structure is used for
+                            BFS traversal?
+                        </h3>
+
+                        <p>
+                            Graph Algorithms
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="saved-options">
+
+                    <div class="saved-option">
+                        A. Stack
+                    </div>
+
+                    <div class="saved-option correct">
+                        B. Queue ✓
+                    </div>
+
+                    <div class="saved-option">
+                        C. Heap
+                    </div>
+
+                    <div class="saved-option">
+                        D. Tree
+                    </div>
+
+                </div>
+
+
+
+                <div class="question-footer">
+
+                    <span class="question-marks">
+                        Marks:
+                        <strong>
+                            1
+                        </strong>
+                    </span>
+
+
+                    <div class="saved-actions">
+
+                        <button
+                            type="button"
+                        >
+                            ✏️
+                        </button>
+
+                        <button
+                            type="button"
+                        >
+                            🗑️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PUBLISH
+            ================================================= -->
+
+            <div class="publish-section">
+
+
+                <div class="publish-info">
+
+                    <strong>
+                        Ready to publish?
+                    </strong>
+
+                    <span>
+                        Make sure all questions and answers
+                        are correct before publishing.
+                    </span>
+
+                </div>
+
+
+                <form
+                    action="/teacher/quiz/1/publish"
+                    method="POST"
+                >
+
+                    <button
+                        type="submit"
+                        class="publish-btn"
+                    >
+                        🚀 Publish Quiz
+                    </button>
+
+                </form>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>

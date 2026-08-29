@@ -1,0 +1,668 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | Smart Academic System</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/profile.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <h2>SmartEdu</h2>
+
+                <span>
+                    Academic System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+            <a
+                href="/dashboard"
+                class="nav-item"
+            >
+                <span>📊</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="/attendance"
+                class="nav-item"
+            >
+                <span>📅</span>
+                Attendance
+            </a>
+
+
+            <a
+                href="/syllabus"
+                class="nav-item"
+            >
+                <span>📚</span>
+                Syllabus
+            </a>
+
+
+            <a
+                href="/resources"
+                class="nav-item"
+            >
+                <span>📖</span>
+                Resources
+            </a>
+
+
+            <a
+                href="/quiz"
+                class="nav-item"
+            >
+                <span>📝</span>
+                Quiz
+            </a>
+
+
+            <a
+                href="/profile"
+                class="nav-item active"
+            >
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+
+        <!-- LOGOUT -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="/logout"
+                class="nav-item logout"
+            >
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                    <p>
+                        Manage your personal and academic information
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Student
+                        </strong>
+
+                        <small>
+                            STU001
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PROFILE HEADER ================= -->
+
+        <section class="profile-header">
+
+            <div class="profile-main">
+
+                <div class="profile-avatar">
+                    S
+                </div>
+
+
+                <div class="profile-name">
+
+                    <h2>
+                        Student Name
+                    </h2>
+
+                    <p>
+                        B.Tech Computer Science & Engineering
+                    </p>
+
+                    <span class="student-id">
+                        Student ID: STU001
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="/profile/edit"
+                class="edit-profile-btn"
+            >
+                ✏️ Edit Profile
+            </a>
+
+        </section>
+
+
+        <!-- ================= PERSONAL INFORMATION ================= -->
+
+        <section class="profile-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+                    <p>
+                        Your basic personal details
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <!-- FULL NAME -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Full Name
+                    </span>
+
+                    <strong>
+                        Student Name
+                    </strong>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Email Address
+                    </span>
+
+                    <strong>
+                        student@example.com
+                    </strong>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Phone Number
+                    </span>
+
+                    <strong>
+                        +91 XXXXX XXXXX
+                    </strong>
+
+                </div>
+
+
+                <!-- DATE OF BIRTH -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Date of Birth
+                    </span>
+
+                    <strong>
+                        15 January 2005
+                    </strong>
+
+                </div>
+
+
+                <!-- GENDER -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Gender
+                    </span>
+
+                    <strong>
+                        Not specified
+                    </strong>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="info-item full-width">
+
+                    <span class="info-label">
+                        Address
+                    </span>
+
+                    <strong>
+                        Kolkata, West Bengal, India
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACADEMIC INFORMATION ================= -->
+
+        <section class="profile-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Academic Information
+                    </h2>
+
+                    <p>
+                        Your academic details
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <!-- STUDENT ID -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Student ID
+                    </span>
+
+                    <strong>
+                        STU001
+                    </strong>
+
+                </div>
+
+
+                <!-- ROLL NUMBER -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Roll Number
+                    </span>
+
+                    <strong>
+                        CSE2026001
+                    </strong>
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Department
+                    </span>
+
+                    <strong>
+                        Computer Science & Engineering
+                    </strong>
+
+                </div>
+
+
+                <!-- COURSE -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Course
+                    </span>
+
+                    <strong>
+                        B.Tech
+                    </strong>
+
+                </div>
+
+
+                <!-- CURRENT SEMESTER -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Current Semester
+                    </span>
+
+                    <strong>
+                        Semester 4
+                    </strong>
+
+                </div>
+
+
+                <!-- SECTION -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Section
+                    </span>
+
+                    <strong>
+                        A
+                    </strong>
+
+                </div>
+
+
+                <!-- ADMISSION YEAR -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Admission Year
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <!-- BATCH -->
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Batch
+                    </span>
+
+                    <strong>
+                        2024–2028
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PERFORMANCE ================= -->
+
+        <section class="profile-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Academic Performance
+                    </h2>
+
+                    <p>
+                        Your overall academic statistics
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="performance-grid">
+
+
+                <div class="performance-item">
+
+                    <div class="performance-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            87%
+                        </strong>
+
+                        <span>
+                            Attendance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-item">
+
+                    <div class="performance-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                        <span>
+                            Syllabus Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-item">
+
+                    <div class="performance-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            82%
+                        </strong>
+
+                        <span>
+                            Average Quiz Score
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-item">
+
+                    <div class="performance-icon">
+                        🏆
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <span>
+                            Quizzes Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACCOUNT ================= -->
+
+        <section class="profile-card account-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Account
+                    </h2>
+
+                    <p>
+                        Manage your account settings
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="account-actions">
+
+                <button
+                    class="account-btn"
+                    id="changePasswordBtn"
+                >
+                    🔐 Change Password
+                </button>
+
+
+                <a
+                    href="/logout"
+                    class="account-btn danger"
+                >
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/profile.js"></script>
+
+</body>
+
+</html>
+```

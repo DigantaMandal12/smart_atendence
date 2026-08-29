@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Resources | Teacher | SmartEdu</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/teacher-resources.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            🎓
+        </div>
+
+        <div class="brand-text">
+
+            <h2>SmartEdu</h2>
+
+            <span>Teacher Portal</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="teacher-mini-profile">
+
+        <div class="teacher-avatar">
+            T
+        </div>
+
+        <div class="teacher-mini-info">
+
+            <strong>Teacher Name</strong>
+
+            <span>ID: EMP001</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a
+            href="/teacher/dashboard"
+            class="nav-item"
+        >
+            <span class="nav-icon">📊</span>
+            Dashboard
+        </a>
+
+
+        <a
+            href="/teacher/students"
+            class="nav-item"
+        >
+            <span class="nav-icon">👨‍🎓</span>
+            Students
+        </a>
+
+
+        <a
+            href="/teacher/attendance"
+            class="nav-item"
+        >
+            <span class="nav-icon">📅</span>
+            Attendance
+        </a>
+
+
+        <a
+            href="/teacher/syllabus"
+            class="nav-item"
+        >
+            <span class="nav-icon">📚</span>
+            Syllabus
+        </a>
+
+
+        <a
+            href="/teacher/resources"
+            class="nav-item active"
+        >
+            <span class="nav-icon">📖</span>
+            Resources
+        </a>
+
+
+        <a
+            href="/teacher/quiz"
+            class="nav-item"
+        >
+            <span class="nav-icon">📝</span>
+            Quiz
+        </a>
+
+
+        <p class="nav-title secondary-title">
+            ACCOUNT
+        </p>
+
+
+        <a
+            href="/teacher/profile"
+            class="nav-item"
+        >
+            <span class="nav-icon">👤</span>
+            Profile
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="/logout"
+            class="logout-btn"
+        >
+            🚪 Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <span>
+                TEACHER PORTAL
+            </span>
+
+            <h1>
+                Resources
+            </h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a
+                href="/teacher/resources/manage"
+                class="manage-btn"
+            >
+                + Add Resource
+            </a>
+
+
+            <div class="topbar-profile">
+
+                <div class="topbar-avatar">
+                    T
+                </div>
+
+                <div>
+
+                    <strong>
+                        Teacher Name
+                    </strong>
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         SUMMARY
+    ===================================================== -->
+
+    <section class="summary-grid">
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                📚
+            </div>
+
+            <div>
+
+                <span>
+                    TOTAL RESOURCES
+                </span>
+
+                <strong>
+                    28
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                🆓
+            </div>
+
+            <div>
+
+                <span>
+                    FREE RESOURCES
+                </span>
+
+                <strong>
+                    19
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                💰
+            </div>
+
+            <div>
+
+                <span>
+                    PAID RESOURCES
+                </span>
+
+                <strong>
+                    9
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                👁️
+            </div>
+
+            <div>
+
+                <span>
+                    TOTAL VIEWS
+                </span>
+
+                <strong>
+                    1,245
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FILTER
+    ===================================================== -->
+
+    <section class="filter-card">
+
+        <div class="filter-group">
+
+            <label>
+                Semester
+            </label>
+
+            <select>
+
+                <option>
+                    All Semesters
+                </option>
+
+                <option>
+                    Semester 1
+                </option>
+
+                <option>
+                    Semester 2
+                </option>
+
+                <option>
+                    Semester 3
+                </option>
+
+                <option selected>
+                    Semester 4
+                </option>
+
+                <option>
+                    Semester 5
+                </option>
+
+                <option>
+                    Semester 6
+                </option>
+
+                <option>
+                    Semester 7
+                </option>
+
+                <option>
+                    Semester 8
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label>
+                Subject
+            </label>
+
+            <select>
+
+                <option>
+                    All Subjects
+                </option>
+
+                <option>
+                    Data Structures & Algorithms
+                </option>
+
+                <option>
+                    Database Management System
+                </option>
+
+                <option>
+                    Operating Systems
+                </option>
+
+                <option>
+                    Computer Networks
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label>
+                Access
+            </label>
+
+            <select>
+
+                <option>
+                    All
+                </option>
+
+                <option>
+                    Free
+                </option>
+
+                <option>
+                    Paid
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search resources..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESOURCE LIST
+    ===================================================== -->
+
+    <section class="resource-card">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    RESOURCE LIBRARY
+                </span>
+
+                <h2>
+                    Your Resources
+                </h2>
+
+            </div>
+
+
+            <span class="resource-count">
+                28 Resources
+            </span>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- RESOURCE 1 -->
+
+            <div class="resource-item">
+
+                <div class="resource-icon pdf">
+                    📄
+                </div>
+
+
+                <div class="resource-info">
+
+                    <h3>
+                        Data Structures Complete Notes
+                    </h3>
+
+                    <p>
+                        Complete unit-wise notes covering
+                        Arrays, Linked Lists, Trees and Graphs.
+                    </p>
+
+
+                    <div class="resource-meta">
+
+                        <span>
+                            📚 DSA
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            PDF
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resource-access free">
+                    FREE
+                </div>
+
+
+                <div class="resource-stats">
+
+                    <span>
+                        👁 324
+                    </span>
+
+                    <span>
+                        ⬇ 182
+                    </span>
+
+                </div>
+
+
+                <div class="resource-actions">
+
+                    <a href="#">
+                        ✏️
+                    </a>
+
+                    <a href="#">
+                        🗑️
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOURCE 2 -->
+
+            <div class="resource-item">
+
+                <div class="resource-icon video">
+                    ▶️
+                </div>
+
+
+                <div class="resource-info">
+
+                    <h3>
+                        Binary Tree Lecture Series
+                    </h3>
+
+                    <p>
+                        Video lectures explaining binary trees,
+                        BST and tree traversal.
+                    </p>
+
+
+                    <div class="resource-meta">
+
+                        <span>
+                            📚 DSA
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            Video
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resource-access free">
+                    FREE
+                </div>
+
+
+                <div class="resource-stats">
+
+                    <span>
+                        👁 210
+                    </span>
+
+                    <span>
+                        ▶ 156
+                    </span>
+
+                </div>
+
+
+                <div class="resource-actions">
+
+                    <a href="#">
+                        ✏️
+                    </a>
+
+                    <a href="#">
+                        🗑️
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOURCE 3 -->
+
+            <div class="resource-item">
+
+                <div class="resource-icon pdf">
+                    📄
+                </div>
+
+
+                <div class="resource-info">
+
+                    <h3>
+                        Advanced SQL Interview Questions
+                    </h3>
+
+                    <p>
+                        Practice material for advanced SQL
+                        and database interview preparation.
+                    </p>
+
+
+                    <div class="resource-meta">
+
+                        <span>
+                            🗄️ DBMS
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            PDF
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resource-access paid">
+                    ₹199
+                </div>
+
+
+                <div class="resource-stats">
+
+                    <span>
+                        👁 452
+                    </span>
+
+                    <span>
+                        ⬇ 98
+                    </span>
+
+                </div>
+
+
+                <div class="resource-actions">
+
+                    <a href="#">
+                        ✏️
+                    </a>
+
+                    <a href="#">
+                        🗑️
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOURCE 4 -->
+
+            <div class="resource-item">
+
+                <div class="resource-icon link">
+                    🔗
+                </div>
+
+
+                <div class="resource-info">
+
+                    <h3>
+                        Operating Systems Study Material
+                    </h3>
+
+                    <p>
+                        Important OS concepts, scheduling,
+                        memory management and deadlocks.
+                    </p>
+
+
+                    <div class="resource-meta">
+
+                        <span>
+                            ⚙️ OS
+                        </span>
+
+                        <span>
+                            Semester 4
+                        </span>
+
+                        <span>
+                            Website
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resource-access free">
+                    FREE
+                </div>
+
+
+                <div class="resource-stats">
+
+                    <span>
+                        👁 178
+                    </span>
+
+                    <span>
+                        ⬆ 64
+                    </span>
+
+                </div>
+
+
+                <div class="resource-actions">
+
+                    <a href="#">
+                        ✏️
+                    </a>
+
+                    <a href="#">
+                        🗑️
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+</body>
+
+</html>

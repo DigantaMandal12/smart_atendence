@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance History | Smart Academic System</title>
+
+    <link rel="stylesheet" href="/css/attendance.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🎓
+            </div>
+
+            <div>
+                <h2>SmartEdu</h2>
+                <span>Academic System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/dashboard" class="nav-item">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="/attendance" class="nav-item active">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="/syllabus" class="nav-item">
+                <span>📚</span>
+                Syllabus
+            </a>
+
+            <a href="/resources" class="nav-item">
+                <span>📖</span>
+                Resources
+            </a>
+
+            <a href="/quiz" class="nav-item">
+                <span>📝</span>
+                Quiz
+            </a>
+
+            <a href="/profile" class="nav-item">
+                <span>👤</span>
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="/logout" class="nav-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+                <div>
+
+                    <h1>Attendance History</h1>
+
+                    <p>
+                        View your complete attendance record
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    🔔
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>Student</strong>
+
+                        <small>
+                            Student ID: STU001
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= FILTER ================= -->
+
+        <section class="attendance-card filter-card">
+
+            <div class="filter-header">
+
+                <div>
+
+                    <h2>Attendance Records</h2>
+
+                    <p>
+                        Filter attendance records by date or subject
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="filter-form">
+
+                <div class="filter-group">
+
+                    <label>
+                        From Date
+                    </label>
+
+                    <input
+                        type="date"
+                        name="fromDate"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>
+                        To Date
+                    </label>
+
+                    <input
+                        type="date"
+                        name="toDate"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <select name="subject">
+
+                        <option value="all">
+                            All Subjects
+                        </option>
+
+                        <option>
+                            Data Structures
+                        </option>
+
+                        <option>
+                            Database Management
+                        </option>
+
+                        <option>
+                            Web Development
+                        </option>
+
+                        <option>
+                            Computer Networks
+                        </option>
+
+                        <option>
+                            Operating Systems
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="filter-btn"
+                >
+                    🔍 Filter
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= HISTORY TABLE ================= -->
+
+        <section class="attendance-card history-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Attendance History</h2>
+
+                    <p>
+                        Recent attendance records
+                    </p>
+
+                </div>
+
+                <button class="export-btn">
+                    📥 Export
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>Subject</th>
+
+                            <th>Teacher</th>
+
+                            <th>Time</th>
+
+                            <th>Room</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 28, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Database Management
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Roy
+                            </td>
+
+                            <td>
+                                11:00 AM
+                            </td>
+
+                            <td>
+                                Room 302
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status present">
+                                    ✓ Present
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 27, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Data Structures
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Sharma
+                            </td>
+
+                            <td>
+                                09:00 AM
+                            </td>
+
+                            <td>
+                                Room 204
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status present">
+                                    ✓ Present
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 26, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Web Development
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Das
+                            </td>
+
+                            <td>
+                                02:00 PM
+                            </td>
+
+                            <td>
+                                Lab 1
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status present">
+                                    ✓ Present
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 25, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Computer Networks
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Sen
+                            </td>
+
+                            <td>
+                                10:00 AM
+                            </td>
+
+                            <td>
+                                Room 201
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status absent">
+                                    ✕ Absent
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 24, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Operating Systems
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Das
+                            </td>
+
+                            <td>
+                                12:00 PM
+                            </td>
+
+                            <td>
+                                Room 205
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status present">
+                                    ✓ Present
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 22, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Data Structures
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Sharma
+                            </td>
+
+                            <td>
+                                09:00 AM
+                            </td>
+
+                            <td>
+                                Room 204
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status present">
+                                    ✓ Present
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Aug 21, 2026
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Database Management
+                                </strong>
+                            </td>
+
+                            <td>
+                                Prof. Roy
+                            </td>
+
+                            <td>
+                                11:00 AM
+                            </td>
+
+                            <td>
+                                Room 302
+                            </td>
+
+                            <td>
+
+                                <span class="attendance-status leave">
+                                    − Leave
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+
+            <div class="pagination">
+
+                <button>
+                    ←
+                </button>
+
+                <button class="page-active">
+                    1
+                </button>
+
+                <button>
+                    2
+                </button>
+
+                <button>
+                    3
+                </button>
+
+                <button>
+                    →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MONTHLY SUMMARY ================= -->
+
+        <section class="attendance-card monthly-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Monthly Summary</h2>
+
+                    <p>
+                        Your attendance performance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="monthly-grid">
+
+
+                <div class="month-item">
+
+                    <span>August</span>
+
+                    <strong>87%</strong>
+
+                    <div class="mini-progress">
+                        <div style="width: 87%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="month-item">
+
+                    <span>July</span>
+
+                    <strong>90%</strong>
+
+                    <div class="mini-progress">
+                        <div style="width: 90%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="month-item">
+
+                    <span>June</span>
+
+                    <strong>84%</strong>
+
+                    <div class="mini-progress">
+                        <div style="width: 84%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="month-item">
+
+                    <span>May</span>
+
+                    <strong>88%</strong>
+
+                    <div class="mini-progress">
+                        <div style="width: 88%"></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/attendance.js"></script>
+
+</body>
+
+</html>
